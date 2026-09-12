@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Ireland to Australia 2027</title>
+<meta name="description" content="Draft family itinerary: Dublin to Singapore, up the Sunshine Coast, then Sydney, Mornington and Perth. Outdoors, water and hikes, late March to mid-April 2027." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+
+<style>
+  :root {
+    --ground: #F4F6F1;
+    --surface: #FFFFFF;
+    --surface-sunk: #EBEEE6;
+    --ink: #14302B;
+    --ink-soft: #4C5C55;
+    --line: #D6DCCE;
+    --teal: #0E7C86;
+    --teal-deep: #0A5860;
+    --ochre: #BF5F2B;
+    --gold: #D29A38;
+    --alert-bg: #FBECE4;
+    --alert-line: #BF5F2B;
+    --alert-ink: #8A3C1B;
+    --ok: #2F7D5D;
+    --shadow-sm: 0 1px 2px rgba(20, 48, 43, .06);
+    --shadow-md: 0 1px 2px rgba(20, 48, 43, .06), 0 10px 30px -16px rgba(20, 48, 43, .28);
+    --maxw: 60rem;
+  }
+
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --ground: #0D1917;
+      --surface: #142825;
+      --surface-sunk: #0F211E;
+      --ink: #E7EDE6;
+      --ink-soft: #9CB0A7;
+      --line: #26403A;
+      --teal: #45B3BB;
+      --teal-deep: #2F929A;
+      --ochre: #E08A4E;
+      --gold: #E7B75C;
+      --alert-bg: #2A1C13;
+      --alert-line: #E08A4E;
+      --alert-ink: #F1C6A6;
+      --ok: #5FB98C;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, .3);
+      --shadow-md: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 34px -18px rgba(0, 0, 0, .7);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0D1917;
+    --surface: #142825;
+    --surface-sunk: #0F211E;
+    --ink: #E7EDE6;
+    --ink-soft: #9CB0A7;
+    --line: #26403A;
+    --teal: #45B3BB;
+    --teal-deep: #2F929A;
+    --ochre: #E08A4E;
+    --gold: #E7B75C;
+    --alert-bg: #2A1C13;
+    --alert-line: #E08A4E;
+    --alert-ink: #F1C6A6;
+    --ok: #5FB98C;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .3);
+    --shadow-md: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 34px -18px rgba(0, 0, 0, .7);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Karla", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    line-height: 1.12;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  a { color: var(--teal-deep); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--teal) 50%, transparent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { text-decoration-color: currentColor; }
+  .card p a { font-weight: 500; }
+
+  .mono {
+    font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: .74rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--teal-deep);
+  }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .7rem clamp(1rem, 4vw, 2.5rem);
+    background: color-mix(in srgb, var(--ground) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .wordmark {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: .01em;
+  }
+  .wordmark span { color: var(--ochre); }
+  .stamp {
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-size: .68rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: .28rem .6rem;
+    white-space: nowrap;
+  }
+  .stamp b { color: var(--ochre); font-weight: 700; }
+
+  /* ---------- layout ---------- */
+  main {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 4vw, 2.5rem) 5rem;
+  }
+  section { margin-top: clamp(2.75rem, 7vw, 4.5rem); }
+  section:first-of-type { margin-top: clamp(1.5rem, 4vw, 2.5rem); }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: .9rem;
+    margin-bottom: 1.4rem;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .section-head h2 { font-size: clamp(1.4rem, 3.2vw, 1.9rem); }
+  .section-head .num {
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-size: .8rem;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- hero ---------- */
+  .hero h1 {
+    font-size: clamp(2.1rem, 6vw, 3.4rem);
+    letter-spacing: -.015em;
+    max-width: 18ch;
+  }
+  .hero .lede {
+    margin-top: 1.1rem;
+    font-size: clamp(1.02rem, 2.4vw, 1.18rem);
+    color: var(--ink-soft);
+    max-width: 54ch;
+  }
+  .facts {
+    list-style: none;
+    margin: 1.8rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+  .facts li {
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-size: .8rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: .4rem .7rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .facts b { color: var(--ochre); font-weight: 700; }
+
+  /* ---------- route chain ---------- */
+  .route-wrap { overflow-x: auto; padding-bottom: .5rem; }
+  .route {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    min-width: max-content;
+  }
+  .route .node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .15rem;
+    padding: .55rem .7rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+  }
+  .route .node .code {
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: .02em;
+  }
+  .route .node .place { font-size: .7rem; color: var(--ink-soft); white-space: nowrap; }
+  .route .seg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--teal);
+    font-size: .62rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    min-width: 2.4rem;
+  }
+  .route .seg svg { width: 100%; height: 14px; }
+  .route .seg.road { color: var(--ochre); }
+
+  /* ---------- season note ---------- */
+  .note {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px;
+    padding: 1.1rem 1.2rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .note .ic { color: var(--gold); }
+  .note p { margin: .2rem 0 0; }
+  .note p:first-child { margin-top: 0; }
+
+  /* ---------- legs ---------- */
+  .legs { display: flex; flex-direction: column; gap: 1.1rem; }
+  .leg {
+    display: grid;
+    grid-template-columns: 13.5rem 1fr;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow-md);
+  }
+  .leg__stub {
+    position: relative;
+    padding: 1.3rem 1.25rem;
+    background: var(--surface-sunk);
+    border-right: 2px dashed var(--line);
+    border-radius: 14px 0 0 14px;
+  }
+  .leg__stub::before, .leg__stub::after {
+    content: "";
+    position: absolute;
+    right: -9px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--ground);
+    border: 1px solid var(--line);
+  }
+  .leg__stub::before { top: -9px; }
+  .leg__stub::after { bottom: -9px; }
+  .leg__label {
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--teal-deep);
+  }
+  .leg__name {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.24rem;
+    margin: .3rem 0 .8rem;
+  }
+  .leg__meta { font-family: "IBM Plex Mono", Menlo, monospace; font-size: .78rem; color: var(--ink-soft); }
+  .leg__meta .dates { color: var(--ink); display: block; }
+  .leg__meta .nights { color: var(--ochre); }
+  .leg__hop {
+    margin-top: .8rem;
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-size: .74rem;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+  }
+  .leg__hop svg { width: 15px; height: 15px; flex: none; color: var(--teal); }
+  .leg__stay {
+    margin-top: .5rem;
+    font-size: .74rem;
+    color: var(--ink-soft);
+  }
+  .leg__stay b {
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-size: .64rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--teal-deep);
+    display: block;
+    font-weight: 500;
+  }
+
+  .leg__body { padding: 1.3rem 1.4rem; }
+  .leg__focus { font-weight: 700; margin: 0 0 .55rem; }
+  .leg__list { margin: 0; padding-left: 1.1rem; color: var(--ink-soft); }
+  .leg__list li { margin: .2rem 0; }
+  .leg__list li::marker { color: var(--teal); }
+  .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .9rem; }
+  .tag {
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-size: .66rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: .22rem .5rem;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+  }
+  .tag[data-k="surf"], .tag[data-k="water"] { color: var(--teal-deep); border-color: color-mix(in srgb, var(--teal) 45%, var(--line)); }
+  .tag[data-k="run"] { color: var(--ochre); border-color: color-mix(in srgb, var(--ochre) 40%, var(--line)); }
+  .tag[data-k="wild"] { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, var(--line)); }
+  .tag[data-k="hike"] { color: var(--gold); border-color: color-mix(in srgb, var(--gold) 50%, var(--line)); }
+
+  @media (max-width: 40rem) {
+    .leg { grid-template-columns: 1fr; }
+    .leg__stub {
+      border-right: 0;
+      border-bottom: 2px dashed var(--line);
+      border-radius: 14px 14px 0 0;
+    }
+    .leg__stub::before { top: auto; bottom: -9px; right: -9px; }
+    .leg__stub::after { bottom: -9px; right: auto; left: -9px; }
+  }
+
+  /* ---------- tables ---------- */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow-sm); }
+  table { border-collapse: collapse; width: 100%; min-width: 32rem; background: var(--surface); }
+  caption { text-align: left; padding: .8rem 1rem; font-size: .82rem; color: var(--ink-soft); border-bottom: 1px solid var(--line); }
+  th, td { text-align: left; padding: .65rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); font-weight: 700; }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.num { font-family: "IBM Plex Mono", Menlo, monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .tbc { color: var(--ink-soft); font-style: italic; }
+
+  /* ---------- allergy protocol ---------- */
+  .protocol {
+    background: var(--alert-bg);
+    border: 1px solid var(--alert-line);
+    border-radius: 14px;
+    padding: 1.4rem 1.5rem;
+  }
+  .protocol h2 {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: 1.3rem;
+    color: var(--alert-ink);
+    margin-bottom: .3rem;
+  }
+  .protocol h2 svg { width: 22px; height: 22px; flex: none; }
+  .protocol ul { margin: .8rem 0 0; padding-left: 1.1rem; }
+  .protocol li { margin: .35rem 0; }
+  .protocol li::marker { color: var(--alert-line); }
+  .protocol strong { color: var(--alert-ink); }
+
+  /* ---------- generic card grid ---------- */
+  .cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.1rem 1.2rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .card h3 { font-size: 1.05rem; margin-bottom: .35rem; }
+  .card .sub { font-family: "IBM Plex Mono", Menlo, monospace; font-size: .72rem; color: var(--ink-soft); }
+  .card p { margin: .5rem 0 0; color: var(--ink-soft); font-size: .92rem; }
+
+  /* ---------- checklist ---------- */
+  .checklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .6rem; }
+  .checklist li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .7rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: .8rem 1rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .checklist .box {
+    width: 18px; height: 18px; margin-top: .15rem;
+    border: 1.5px solid var(--teal);
+    border-radius: 5px;
+    flex: none;
+  }
+  .checklist .who {
+    display: block;
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-size: .68rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--teal-deep);
+    margin-top: .2rem;
+  }
+
+  /* ---------- open questions ---------- */
+  .questions {
+    background: var(--surface);
+    border: 1px dashed var(--ochre);
+    border-radius: 14px;
+    padding: 1.3rem 1.5rem;
+  }
+  .questions h2 { font-size: 1.2rem; color: var(--ochre); margin-bottom: .2rem; }
+  .questions ol { margin: .8rem 0 0; padding-left: 1.2rem; }
+  .questions li { margin: .45rem 0; }
+  .questions li::marker { font-family: "IBM Plex Mono", Menlo, monospace; color: var(--ochre); }
+
+  footer {
+    max-width: var(--maxw);
+    margin: 4rem auto 0;
+    padding: 1.6rem clamp(1rem, 4vw, 2.5rem) 3rem;
+    border-top: 1px solid var(--line);
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-size: .74rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    a, .stamp { transition: color .15s ease; }
+  }
+
+  :focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10.5 19.5 12 22l1.5-2.5V15l7 2v-2l-7-5V4a1.5 1.5 0 0 0-3 0v6l-7 5v2l7-2v4.5Z" />
+    </symbol>
+    <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 13 6 7h12l2 6M4 13h16v5h-2v-2H6v2H4v-5Z" /><circle cx="7.5" cy="15.5" r="1" /><circle cx="16.5" cy="15.5" r="1" />
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4" /><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" />
+    </symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3 2 20h20L12 3Z" /><path d="M12 9v5" /><circle cx="12" cy="17.5" r=".6" fill="currentColor" />
+    </symbol>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <span class="wordmark">Dublin <span>&rarr;</span> Australia &middot; 2027</span>
+  <span class="stamp">Draft &middot; dates <b>not locked</b></span>
+</header>
+
+<main>
+
+  <section class="hero">
+    <p class="eyebrow">Family trip &middot; working itinerary</p>
+    <h1>Dublin to Australia, the long way round</h1>
+    <p class="lede">
+      Family of four &mdash; two adults, two teens (16 and 12) &mdash; heading out over the
+      Easter break, late March to mid-April 2027. Roughly three and a half weeks, open-jaw:
+      in through Singapore, home from Perth. The brief: as much time in the water, on the trail
+      and outdoors as we can fit &mdash; not wandering around cities.
+    </p>
+    <ul class="facts">
+      <li><b>~22</b> nights on the ground</li>
+      <li><b>6</b> flights + 1 road trip</li>
+      <li><b>3</b> surf lessons &middot; <b>1</b> eFoil day</li>
+      <li><b>1</b> EpiPen, always carried</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">01</span><h2>The route</h2></div>
+    <div class="route-wrap">
+      <div class="route">
+        <div class="node"><span class="code">DUB</span><span class="place">Dublin</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~13h</div>
+        <div class="node"><span class="code">SIN</span><span class="place">Singapore</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~8h</div>
+        <div class="node"><span class="code">MCY</span><span class="place">Noosa</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~1.5h</div>
+        <div class="node"><span class="code">SYD</span><span class="place">Freshwater</span></div>
+        <div class="seg road"><svg><use href="#i-car" /></svg>road</div>
+        <div class="node"><span class="code">KAT</span><span class="place">Blue Mtns</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~1.5h</div>
+        <div class="node"><span class="code">MEL</span><span class="place">Mornington</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~4h</div>
+        <div class="node"><span class="code">PER</span><span class="place">Perth</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~17h+</div>
+        <div class="node"><span class="code">DUB</span><span class="place">Dublin</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">02</span><h2>Timing &amp; season</h2></div>
+    <div class="note">
+      <span class="ic"><svg width="24" height="24"><use href="#i-sun" /></svg></span>
+      <div>
+        <p>
+          Departure is pencilled for <strong>Tuesday 23 March 2027</strong>, the start of the Irish
+          post-primary Easter break, to keep missed school to the week after Easter.
+        </p>
+        <p>
+          Late March to mid-April is <strong>autumn in Australia</strong>. Queensland is warm and
+          settled (mid-20s&deg;C, water still 24&ndash;25&deg;C &mdash; ideal for the foiling and first
+          surf lessons); Sydney is mild with warm ocean; Melbourne / Mornington is cooler and
+          changeable (bring layers for the coast walks); Perth is dry and mild. Autumn also means
+          <strong>smaller, cleaner surf</strong> &mdash; good for beginners. <strong>Easter Sunday is
+          28 March</strong>, mid-way through the Noosa leg, so book activities there early.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">03</span><h2>Leg by leg</h2></div>
+    <div class="legs">
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 1</div>
+          <div class="leg__name">Singapore stopover</div>
+          <div class="leg__meta">
+            <span class="dates">Tue 23 &ndash; Fri 26 Mar</span>
+            <span class="nights">3 nights &middot; 2 full days</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> DUB &rarr; SIN</div>
+          <div class="leg__stay"><b>Stay</b> Hotel &mdash; Holiday Inn Express Clarke Quay or Mercure Bugis</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">Break the long-haul, get outside, start shifting the body clock. Keep it active, not sightseeing.</p>
+          <ul class="leg__list">
+            <li>Cycle the flat, car-free East Coast Park track; kayak or SUP off the ECP lagoon</li>
+            <li><a href="https://www.nparks.gov.sg/visit/parks/park-detail/macritchie-reservoir-park">MacRitchie Reservoir</a> &mdash; TreeTop Walk suspension bridge and the boardwalk loop through rainforest (monkeys, monitor lizards)</li>
+            <li><a href="https://www.nparks.gov.sg/visit/parks/park-detail/southern-ridges">Southern Ridges</a> &mdash; Henderson Waves and the forest walk to Mount Faber</li>
+            <li>Wild smooth-coated otters around Marina Bay / Kallang at dawn or dusk</li>
+            <li>Changi Jewel Rain Vortex on the way through; sit-down dining at Clarke Quay (confirm prep for the allergy)</li>
+          </ul>
+          <div class="tags">
+            <span class="tag" data-k="water">Cycling / kayak</span>
+            <span class="tag" data-k="hike">Rainforest walks</span>
+            <span class="tag" data-k="wild">Otters</span>
+            <span class="tag">Jet-lag reset</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 2</div>
+          <div class="leg__name">Noosa &amp; the Sunshine Coast</div>
+          <div class="leg__meta">
+            <span class="dates">Fri 26 &ndash; Tue 30 Mar</span>
+            <span class="nights">4 nights</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> SIN &rarr; MCY / BNE</div>
+          <div class="leg__stay"><b>Stay</b> HomeExchange &mdash; near Noosa River / Sunshine Beach</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">Warm-water landing and the adventure core of the trip &mdash; foiling, first surf, and the coastal national park.</p>
+          <ul class="leg__list">
+            <li><a href="https://fliteschool.com/">Fliteschool Noosa</a> (Gympie Terrace) &mdash; Flitescooter for the 12-year-old, eFoil partner session for the adult + 16-year-old</li>
+            <li>Beginner surf at Noosa Main Beach with <a href="https://gorideawave.com.au/surf-lessons/noosa/">Go Ride A Wave</a> &mdash; long, gentle, north-facing whitewash</li>
+            <li><a href="https://parks.desi.qld.gov.au/parks/noosa">Noosa National Park</a> coastal track &mdash; Hell's Gates circuit, wild koalas in the trees, Fairy Pools rock swim at Tea Tree Bay</li>
+            <li>Kayak or SUP the Noosa Everglades (Kin Kin creek); stand-up paddle the river mouth</li>
+            <li>Snorkel Tea Tree / Granite Bay on a calm morning</li>
+          </ul>
+          <div class="tags">
+            <span class="tag" data-k="surf">Surf lesson</span>
+            <span class="tag" data-k="water">eFoil / kayak / SUP</span>
+            <span class="tag" data-k="hike">Coastal track</span>
+            <span class="tag" data-k="wild">Koalas</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 3A</div>
+          <div class="leg__name">Sydney &mdash; Freshwater base</div>
+          <div class="leg__meta">
+            <span class="dates">Tue 30 Mar &ndash; Sun 4 Apr</span>
+            <span class="nights">5 nights</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> MCY &rarr; SYD</div>
+          <div class="leg__stay"><b>Stay</b> Freshwater, Northern Beaches &mdash; walk to Manly</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">Based at Freshwater on the Northern Beaches &mdash; ocean on the doorstep, family nearby, and the best coastal walking in the city.</p>
+          <ul class="leg__list">
+            <li>Manly "Kiddies Corner" surf lesson with <a href="https://www.manlysurfschool.com/">Manly Surf School</a>; snorkel Cabbage Tree Bay / Shelly Beach for blue gropers</li>
+            <li><a href="https://www.nationalparks.nsw.gov.au/things-to-do/walking-tracks/manly-scenic-walkway">Spit to Manly</a> track (10 km harbour-bushland walk) and the Manly to North Head circuit</li>
+            <li>Freshwater and Queenscliff ocean pools; bodyboard the Freshwater flags</li>
+            <li>Bondi to Coogee clifftop walk on a city day; ferry to Taronga Zoo</li>
+            <li>Fun run &mdash; Run2Cure Neuroblastoma (Sat 4 Apr, 5k or 10k) or the Spit to Manly event</li>
+          </ul>
+          <div class="tags">
+            <span class="tag" data-k="surf">Surf lesson</span>
+            <span class="tag" data-k="hike">Coast walks</span>
+            <span class="tag" data-k="wild">Blue gropers</span>
+            <span class="tag" data-k="run">Fun run</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 3B</div>
+          <div class="leg__name">Blue Mountains</div>
+          <div class="leg__meta">
+            <span class="dates">Sun 4 &ndash; Tue 6 Apr</span>
+            <span class="nights">2 nights &middot; road trip</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-car" /></svg> Sydney &rarr; Blackheath, ~1.5h</div>
+          <div class="leg__stay"><b>Stay</b> HomeExchange &mdash; Leura or Blackheath</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">Rental car to the mountain villages &mdash; two dense days of canyon walks and ropes.</p>
+          <ul class="leg__list">
+            <li><a href="https://www.nationalparks.nsw.gov.au/things-to-do/walking-tracks/grand-canyon-track">Grand Canyon track</a> (Blackheath) &mdash; the classic descent into rainforest and back</li>
+            <li>National Pass and the Wentworth Falls cliff-ledge circuit</li>
+            <li>Canyoning or abseiling for the teens with a Katoomba guide (<a href="https://www.highnwild.com.au/">High &amp; Wild</a>, <a href="https://www.australianschoolofmountaineering.com.au/">ASM</a>); <a href="https://treesadventure.com.au/parks/yarramundi/">Trees Adventure</a> high ropes</li>
+            <li><a href="https://www.scenicworld.com.au/">Scenic World</a> &mdash; the world's steepest railway down to the boardwalks; walk out via the Furber Steps</li>
+            <li>Govetts Leap and the Pulpit Rock lookout at Blackheath; return the car on the 6th</li>
+          </ul>
+          <div class="tags">
+            <span class="tag" data-k="hike">Canyon walks</span>
+            <span class="tag" data-k="water">Canyoning</span>
+            <span class="tag">Abseiling / ropes</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 4</div>
+          <div class="leg__name">Mornington Peninsula</div>
+          <div class="leg__meta">
+            <span class="dates">Tue 6 &ndash; Sat 10 Apr</span>
+            <span class="nights">4 nights</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> SYD &rarr; MEL, ~1.5h</div>
+          <div class="leg__stay"><b>Stay</b> Mornington</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">Based in Mornington, not the city &mdash; two coastlines, bush trails and cooler-water paddling. One city day, optional.</p>
+          <ul class="leg__list">
+            <li><a href="https://www.parks.vic.gov.au/places-to-see/points-of-interest/two-bays-walking-track">Two Bays Walking Track</a> &mdash; Dromana to Cape Schanck across the peninsula spine</li>
+            <li>Cape Schanck boardwalk to the lighthouse and the Bushrangers Bay track</li>
+            <li>Sea kayak from Mornington or Blairgowrie (<a href="https://bayplay.com.au/">Bayplay</a>) &mdash; weedy seadragons, dolphins, fur seals at Chinamans Hat</li>
+            <li>Surf / bodyboard the Point Leo and Gunnamatta beaches; <a href="https://www.peninsulahotsprings.com/">Peninsula Hot Springs</a> to thaw out</li>
+            <li>Arthurs Seat walk-up and the Kings Falls circuit; Mornington Esplanade coastal 10k fun run</li>
+            <li>City day: Werribee, or the laneways and MCG if it rains</li>
+          </ul>
+          <div class="tags">
+            <span class="tag" data-k="hike">Two Bays Track</span>
+            <span class="tag" data-k="water">Sea kayak / surf</span>
+            <span class="tag" data-k="wild">Seals / seadragons</span>
+            <span class="tag" data-k="run">Fun run</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 5</div>
+          <div class="leg__name">Perth &amp; Rottnest Island</div>
+          <div class="leg__meta">
+            <span class="dates">Sat 10 &ndash; Wed 14 Apr</span>
+            <span class="nights">4 nights</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> MEL &rarr; PER, ~4h</div>
+          <div class="leg__stay"><b>Stay</b> HomeExchange &mdash; near Cottesloe / Fremantle (TBD)</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">Friends in Perth, the last surf lesson, and the best snorkelling of the trip.</p>
+          <ul class="leg__list">
+            <li><a href="https://www.rottnestisland.com/">Rottnest Island</a> &mdash; ferry across, bikes for the day, snorkel the marked trails at Little Salmon Bay and Parker Point, quokkas everywhere</li>
+            <li>Beginner surf at Leighton / Brighton with <a href="https://www.gosurf.com.au/">Go Surf Perth</a> &mdash; Rottnest shelters the city beaches</li>
+            <li>Sea kayak to <a href="https://www.rockinghamwildencounters.com.au/">Penguin Island</a> (Shoalwater) &mdash; sea lions, dolphins, little penguins</li>
+            <li>Snorkel the Coogee Maritime Trail wreck; SUP the Swan at Matilda Bay</li>
+            <li><a href="https://www.bgpa.wa.gov.au/kings-park">Kings Park</a> bushland trails and the treetop glass bridge; Cottesloe sunset; Bibbulmun Track sampler in John Forrest NP</li>
+            <li>Fun run &mdash; WAMC Bridges 10k or a Swan River loop</li>
+          </ul>
+          <div class="tags">
+            <span class="tag" data-k="surf">Surf lesson</span>
+            <span class="tag" data-k="water">Snorkel / kayak / SUP</span>
+            <span class="tag" data-k="wild">Quokkas / sea lions</span>
+            <span class="tag" data-k="run">Fun run</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 6</div>
+          <div class="leg__name">The flight home</div>
+          <div class="leg__meta">
+            <span class="dates">Wed 14 &ndash; Thu 15 Apr</span>
+            <span class="nights">or extend Perth to ~18 Apr</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> PER &rarr; DUB, one stop</div>
+          <div class="leg__stay"><b>Home</b> school back ~13 Apr</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">Evening departure from Perth, single transfer through Asia (Singapore Airlines or a partner hub) to Dublin.</p>
+          <ul class="leg__list">
+            <li>A 14 April return gives a weekend to recover before school; extending to the 18th trades that for more Perth / Margaret River time</li>
+          </ul>
+          <div class="tags"><span class="tag">Open question</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">04</span><h2>Surf, foil &amp; runs</h2></div>
+
+    <div class="table-wrap" style="margin-bottom:1.2rem">
+      <table>
+        <caption>Beginner surf lessons &mdash; one per coast, all chosen for sheltered, forgiving breaks</caption>
+        <thead>
+          <tr><th>Leg</th><th>Beach</th><th>Operator</th><th>Why it works</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Noosa</td><td>Noosa Main Beach</td><td>Go Ride A Wave</td>
+            <td>North-facing, sheltered from swell &mdash; long, gentle peeling whitewash over sandbars</td>
+          </tr>
+          <tr>
+            <td>Sydney</td><td>Manly, southern corner ("Kiddies Corner")</td><td>Manly Surf School</td>
+            <td>Shelly Beach end is shielded from big swell; soft waist-high rolls. Pairs with Cabbage Tree Bay snorkelling</td>
+          </tr>
+          <tr>
+            <td>Perth</td><td>Leighton / Brighton Beach</td><td>Go Surf Perth</td>
+            <td>Rottnest Island is an offshore breakwater &mdash; clear, gentle, shallow waves over soft sand</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Flitescooter &mdash; 12-year-old</h3>
+        <p class="sub">Fliteschool Noosa &middot; ~30 min</p>
+        <p>Handlebar-guided eFoil on a high-volume inflatable board. Flat water, no athletic pressure. <span class="mono">~A$99</span></p>
+      </div>
+      <div class="card">
+        <h3>eFoil partner experience &mdash; adult + 16-year-old</h3>
+        <p class="sub">Fliteschool Noosa &middot; ~90 min</p>
+        <p>Discounted two-rider booking &mdash; beginner Fliteboard AIR for him, custom setup for you. <span class="mono">~A$215 pp</span></p>
+      </div>
+      <div class="card">
+        <h3>Fun runs &mdash; one per city if the dates land</h3>
+        <p class="sub">Register once 2027 dates are published</p>
+        <p>Sydney: <a href="https://sydney.run2cure.org.au/">Run2Cure Neuroblastoma</a>, Sat 4 Apr (5k / 10k). Mornington: Esplanade coastal 10k. Perth: WAMC Bridges 10k. The 15k near Noosa on 20 Mar is before you land &mdash; a miss.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">05</span><h2>Animals in the wild</h2></div>
+    <p style="color:var(--ink-soft);max-width:56ch;margin:0 0 1.2rem">
+      Wild sightings only where we can &mdash; no cages. Note: <strong>wild koalas are an east-coast
+      animal</strong> (Queensland, NSW, Victoria), so Noosa is the best koala shot; there are none in
+      the wild around Perth.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <h3>Singapore</h3>
+        <p class="sub">Otters &middot; water monitors &middot; long-tailed macaques</p>
+        <p>Wild smooth-coated <a href="https://www.nparks.gov.sg/">otter</a> families around Marina Bay and Kallang at dawn/dusk; monitors and macaques on the MacRitchie boardwalk.</p>
+      </div>
+      <div class="card">
+        <h3>Noosa</h3>
+        <p class="sub">Koalas &middot; dolphins &middot; bush turkeys &middot; lorikeets</p>
+        <p>Wild koalas in the gums along the <a href="https://parks.desi.qld.gov.au/parks/noosa">Noosa National Park</a> coastal track (Tea Tree Bay stretch); bottlenose dolphins off the headland; rainbow lorikeets everywhere.</p>
+      </div>
+      <div class="card">
+        <h3>Sydney &mdash; Freshwater / Manly</h3>
+        <p class="sub">Blue gropers &middot; little penguins &middot; water dragons</p>
+        <p>Blue gropers snorkelling <a href="https://www.northernbeaches.nsw.gov.au/things-to-do/parks-reserves/cabbage-tree-bay-aquatic-reserve">Cabbage Tree Bay</a>; a protected little-penguin colony breeds around Manly's North Harbour; eastern water dragons on the coast track.</p>
+      </div>
+      <div class="card">
+        <h3>Blue Mountains</h3>
+        <p class="sub">Wombats &middot; swamp wallabies &middot; lyrebirds &middot; cockatoos</p>
+        <p>Wombats and grey kangaroos in the <a href="https://www.nationalparks.nsw.gov.au/visit-a-park/parks/blue-mountains-national-park">Megalong Valley</a> at dusk; superb lyrebirds scratching beside the Leura tracks; sulphur-crested and gang-gang cockatoos.</p>
+      </div>
+      <div class="card">
+        <h3>Mornington Peninsula</h3>
+        <p class="sub">Kangaroos &middot; echidnas &middot; seals &middot; seadragons &middot; dolphins</p>
+        <p>Grey kangaroos at dawn in <a href="https://www.parks.vic.gov.au/places-to-see/parks/mornington-peninsula-national-park">Greens Bush</a>; echidnas on the Cape Schanck tracks; weedy seadragons, fur seals and dolphins on a bay kayak.</p>
+      </div>
+      <div class="card">
+        <h3>Perth &amp; Rottnest</h3>
+        <p class="sub">Quokkas &middot; sea lions &middot; wild dolphins &middot; NZ fur seals</p>
+        <p>Quokkas all over car-free <a href="https://www.rottnestisland.com/">Rottnest</a>; Australian sea lions, little penguins and wild dolphins on a <a href="https://www.rockinghamwildencounters.com.au/">Penguin Island</a> sea-kayak trip; ospreys over Cottesloe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="protocol">
+    <h2><svg><use href="#i-alert" /></svg> Nut allergy protocol</h2>
+    <p>Severe nut allergy, EpiPen carrier. This shapes airline, city and dining choices &mdash; it is not a footnote.</p>
+    <ul>
+      <li><strong>EpiPens</strong> (two, in date) carried in hand luggage at all times, split between two adults. GP letter for airport security.</li>
+      <li><strong>Pre-flag the allergy on every flight booking</strong> &mdash; nut-free meal request, medical notes on the PNR, ask about buffer-zone seating and pre-boarding to wipe the area down.</li>
+      <li><strong>Singapore is deliberate</strong> &mdash; high English fluency, clear packaged-food labelling, staff used to allergy questions.</li>
+      <li>Self-catering via <strong>HomeExchange helps</strong> &mdash; own kitchen for most stays cuts the restaurant risk right down.</li>
+      <li>Carry an <strong>allergy translation / chef card</strong>; know the local emergency number (Singapore 995, Australia 000).</li>
+      <li><strong>Travel insurance</strong> confirmed to cover anaphylaxis and medical evacuation; carry a copy of the policy.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">06</span><h2>Where we're staying</h2></div>
+    <div class="table-wrap">
+      <table>
+        <caption>Plan is HomeExchange wherever possible to keep costs down &mdash; own kitchen also helps with the allergy</caption>
+        <thead><tr><th>Leg</th><th>Base</th><th>Nights</th><th>Plan</th></tr></thead>
+        <tbody>
+          <tr><td>Singapore</td><td>Clarke Quay or Bugis</td><td class="num">3</td><td>Hotel &mdash; Holiday Inn Express Clarke Quay (IHG) or Mercure Bugis. Too short for an exchange.</td></tr>
+          <tr><td>Noosa</td><td>Noosa River / Sunshine Beach</td><td class="num">4</td><td class="tbc">HomeExchange &mdash; searching</td></tr>
+          <tr><td>Sydney</td><td>Freshwater, Northern Beaches</td><td class="num">5</td><td>Known base &mdash; walk to Manly, family nearby</td></tr>
+          <tr><td>Blue Mountains</td><td>Leura or Blackheath</td><td class="num">2</td><td class="tbc">HomeExchange &mdash; searching</td></tr>
+          <tr><td>Mornington</td><td>Mornington</td><td class="num">4</td><td>Known base</td></tr>
+          <tr><td>Perth</td><td>Cottesloe / Fremantle (TBD)</td><td class="num">4</td><td class="tbc">HomeExchange &mdash; area not fixed yet</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">07</span><h2>Budget &mdash; to be filled in</h2></div>
+    <div class="table-wrap" style="margin-bottom:1.2rem">
+      <table>
+        <caption>Flights &mdash; awaiting the open-jaw multi-city quote from Trailfinders, Dawson St</caption>
+        <thead><tr><th>Segment</th><th>Notes</th><th>Est. (party of 4)</th></tr></thead>
+        <tbody>
+          <tr><td>DUB &rarr; SIN &rarr; MCY</td><td>Long-haul with the Singapore stopover built in</td><td class="num tbc">quote pending</td></tr>
+          <tr><td>MCY &rarr; SYD &rarr; MEL &rarr; PER</td><td>Three domestic hops &mdash; bundle vs separate (Qantas / Virgin / Jetstar)</td><td class="num tbc">quote pending</td></tr>
+          <tr><td>PER &rarr; DUB</td><td>Single transfer via Asia</td><td class="num tbc">quote pending</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption>Activities &mdash; known prices in AUD, party of 4 unless noted</caption>
+        <thead><tr><th>Activity</th><th>Who</th><th>Cost</th></tr></thead>
+        <tbody>
+          <tr><td>Flitescooter session, Noosa</td><td>12-year-old</td><td class="num">A$99</td></tr>
+          <tr><td>eFoil partner experience, Noosa</td><td>Adult + 16-year-old</td><td class="num">A$215 &times; 2 = A$430</td></tr>
+          <tr><td>Surf lessons &times; 3 (Noosa, Manly, Perth)</td><td>Family</td><td class="num tbc">~A$70&ndash;90 pp / lesson</td></tr>
+          <tr><td>Rottnest ferry + bike hire</td><td>Family</td><td class="num tbc">TBC</td></tr>
+          <tr><td>Penguin Island sea-kayak tour</td><td>Family</td><td class="num tbc">TBC</td></tr>
+          <tr><td>Blue Mountains canyoning / abseil guide</td><td>Teens (+ adult)</td><td class="num tbc">TBC</td></tr>
+          <tr><td>Mornington sea-kayak tour</td><td>Family</td><td class="num tbc">TBC</td></tr>
+          <tr><td>Peninsula Hot Springs</td><td>Family</td><td class="num tbc">TBC</td></tr>
+          <tr><td>Fun run entries &times; ~3</td><td>Varies</td><td class="num tbc">TBC</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">08</span><h2>Next steps</h2></div>
+    <ul class="checklist">
+      <li><span class="box"></span><div><span class="who">Flights</span>Open-jaw multi-city quote from Trailfinders (Dawson St): DUB &rarr; SIN (stopover) &rarr; MCY &hellip; PER &rarr; DUB, plus the SYD&rarr;MEL&rarr;PER domestics priced as a bundle.</div></li>
+      <li><span class="box"></span><div><span class="who">Allergy</span>Pre-flag the severe nut allergy on every booking as it's made &mdash; meals, PNR medical notes, seating.</div></li>
+      <li><span class="box"></span><div><span class="who">Stays</span>Post HomeExchange listings and start requests for Noosa, Blue Mountains and Perth. Decide the Perth area (Cottesloe vs Fremantle).</div></li>
+      <li><span class="box"></span><div><span class="who">School</span>Notify Belvedere College &mdash; TY Coordinator (16-year-old) and 2nd-year office (12-year-old) &mdash; about the week after the Easter break, ~5 April onward.</div></li>
+      <li><span class="box"></span><div><span class="who">Book early</span>Fliteschool Noosa over Easter week &mdash; limited slots. Blue Mountains canyoning guide. Penguin Island kayak tour.</div></li>
+      <li><span class="box"></span><div><span class="who">Runs</span>Confirm 2027 dates for Run2Cure and the Mornington / Perth runs, then register.</div></li>
+      <li><span class="box"></span><div><span class="who">Decide</span>Return on 14 April, or extend Perth to ~18 April?</div></li>
+      <li><span class="box"></span><div><span class="who">Insurance</span>Travel insurance covering anaphylaxis + medical evacuation, and adventure activities (canyoning, surf, kayak), for all four.</div></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">09</span><h2>Links &amp; booking pages</h2></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Water &amp; adventure</h3>
+        <p><a href="https://fliteschool.com/">Fliteschool Noosa</a> &middot; <a href="https://gorideawave.com.au/surf-lessons/noosa/">Go Ride A Wave</a> &middot; <a href="https://www.manlysurfschool.com/">Manly Surf School</a> &middot; <a href="https://www.gosurf.com.au/">Go Surf Perth</a> &middot; <a href="https://bayplay.com.au/">Bayplay (Mornington kayak)</a> &middot; <a href="https://www.rockinghamwildencounters.com.au/">Penguin Island kayak</a> &middot; <a href="https://www.highnwild.com.au/">High &amp; Wild (canyoning)</a></p>
+      </div>
+      <div class="card">
+        <h3>Parks &amp; trails</h3>
+        <p><a href="https://parks.desi.qld.gov.au/parks/noosa">Noosa NP</a> &middot; <a href="https://www.nationalparks.nsw.gov.au/visit-a-park/parks/blue-mountains-national-park">Blue Mountains NP</a> &middot; <a href="https://www.scenicworld.com.au/">Scenic World</a> &middot; <a href="https://www.parks.vic.gov.au/places-to-see/parks/mornington-peninsula-national-park">Mornington Peninsula NP</a> &middot; <a href="https://www.rottnestisland.com/">Rottnest Island</a> &middot; <a href="https://www.bgpa.wa.gov.au/kings-park">Kings Park</a> &middot; <a href="https://www.nparks.gov.sg/">NParks Singapore</a></p>
+      </div>
+      <div class="card">
+        <h3>Runs, stays &amp; booking</h3>
+        <p><a href="https://sydney.run2cure.org.au/">Run2Cure Sydney</a> &middot; <a href="https://www.homeexchange.com/">HomeExchange</a> &middot; <a href="https://www.trailfinders.ie/">Trailfinders</a> &middot; <a href="https://www.peninsulahotsprings.com/">Peninsula Hot Springs</a></p>
+      </div>
+      <div class="card">
+        <h3>Photos &amp; video</h3>
+        <p>Drop images into the <span class="mono">photos/</span> folder and they'll be embedded per leg. YouTube clips link out (they can't embed here). Links above are starting points &mdash; worth a quick check for 2027 dates and prices.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="questions">
+    <h2>Open questions</h2>
+    <p>Things in the notes that don't yet line up &mdash; worth settling before the quote request.</p>
+    <ol>
+      <li><strong>Who's travelling?</strong> The plan says two teens (16 and 12), but an earlier note mentioned a 5-year-old. Confirm the party &mdash; it changes activities, room configs and the HomeExchange search.</li>
+      <li><strong>Return date:</strong> 14 April, or extend Perth to the 18th (Margaret River)? Affects the Perth leg and the flight quote.</li>
+      <li><strong>Perth base:</strong> Cottesloe, Fremantle or near the friends? Needed to start the HomeExchange search.</li>
+      <li><strong>Noosa 15k on 20 March</strong> &mdash; you land on the 26th, so drop it, or is there a later event to chase?</li>
+      <li><strong>Melbourne city time</strong> &mdash; with a Mornington base, is one optional city day enough, or skip it entirely?</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  Draft working itinerary &mdash; dates, order, stays and prices are all still moving.<br />
+  Last updated 5 September 2026. Built for the family; not for wider sharing until the plan firms up.
+</footer>
+</body>
+</html>
