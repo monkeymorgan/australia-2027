@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex, nofollow" />
 <title>Ireland to Australia 2027</title>
-<meta name="description" content="Draft family itinerary: Dublin to Singapore, up the Sunshine Coast, then Sydney, Mornington and Perth. Outdoors, water and hikes, late March to mid-April 2027." />
+<meta name="description" content="Two draft routes for the family trip: Dublin to Singapore, then either Noosa/Sydney/Perth or Perth/Melbourne/Sydney, late March to mid-April 2027." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" />
@@ -170,23 +170,73 @@
   .hero h1 {
     font-size: clamp(2.1rem, 6vw, 3.4rem);
     letter-spacing: -.015em;
-    max-width: 18ch;
+    max-width: 20ch;
   }
   .hero .lede {
     margin-top: 1.1rem;
     font-size: clamp(1.02rem, 2.4vw, 1.18rem);
     color: var(--ink-soft);
-    max-width: 54ch;
+    max-width: 58ch;
   }
-  .facts {
+
+  /* ---------- option toggle ---------- */
+  .option-toggle {
+    display: inline-flex;
+    gap: .25rem;
+    background: var(--surface-sunk);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: .25rem;
+    margin: 1.7rem 0 .6rem;
+  }
+  .option-toggle button {
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-size: .8rem;
+    letter-spacing: .02em;
+    border: 0;
+    background: transparent;
+    color: var(--ink-soft);
+    padding: .55rem 1.2rem;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .option-toggle button[aria-pressed="true"] {
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: var(--shadow-sm);
+    font-weight: 700;
+  }
+  .option-toggle button span { color: var(--ochre); }
+  .option-toggle button:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+  .option-blurb { font-size: .85rem; color: var(--ink-soft); max-width: 46ch; }
+
+  .option-panel__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .6rem 1rem;
+    margin-bottom: .3rem;
+  }
+  .option-panel__head h2 { font-size: clamp(1.6rem, 3.6vw, 2.1rem); }
+  .option-panel__head .pill {
+    font-family: "IBM Plex Mono", Menlo, monospace;
+    font-size: .68rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--surface);
+    background: var(--teal-deep);
+    border-radius: 999px;
+    padding: .25rem .65rem;
+  }
+  .option-panel > .facts {
     list-style: none;
-    margin: 1.8rem 0 0;
+    margin: 1.1rem 0 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
   }
-  .facts li {
+  .option-panel > .facts li {
     font-family: "IBM Plex Mono", Menlo, monospace;
     font-size: .8rem;
     background: var(--surface);
@@ -195,7 +245,7 @@
     padding: .4rem .7rem;
     box-shadow: var(--shadow-sm);
   }
-  .facts b { color: var(--ochre); font-weight: 700; }
+  .option-panel > .facts b { color: var(--ochre); font-weight: 700; }
 
   /* ---------- route chain ---------- */
   .route-wrap { overflow-x: auto; padding-bottom: .5rem; }
@@ -216,6 +266,7 @@
     border-radius: 10px;
     box-shadow: var(--shadow-sm);
   }
+  .route .node.tbd { border-style: dashed; border-color: var(--ochre); }
   .route .node .code {
     font-family: "IBM Plex Mono", Menlo, monospace;
     font-weight: 500;
@@ -262,6 +313,7 @@
     border-radius: 14px;
     box-shadow: var(--shadow-md);
   }
+  .leg.tbd { border-style: dashed; border-color: var(--ochre); box-shadow: none; }
   .leg__stub {
     position: relative;
     padding: 1.3rem 1.25rem;
@@ -288,6 +340,7 @@
     text-transform: uppercase;
     color: var(--teal-deep);
   }
+  .leg.tbd .leg__label { color: var(--ochre); }
   .leg__name {
     font-family: "Fraunces", Georgia, serif;
     font-size: 1.24rem;
@@ -341,6 +394,7 @@
   .tag[data-k="run"] { color: var(--ochre); border-color: color-mix(in srgb, var(--ochre) 40%, var(--line)); }
   .tag[data-k="wild"] { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, var(--line)); }
   .tag[data-k="hike"] { color: var(--gold); border-color: color-mix(in srgb, var(--gold) 50%, var(--line)); }
+  .tag[data-k="wine"] { color: #8A5A2E; border-color: color-mix(in srgb, var(--gold) 60%, var(--line)); }
 
   @media (max-width: 40rem) {
     .leg { grid-template-columns: 1fr; }
@@ -449,7 +503,7 @@
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    a, .stamp { transition: color .15s ease; }
+    a, .stamp, .option-toggle button { transition: color .15s ease, background .15s ease; }
   }
 
   :focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 3px; }
@@ -481,14 +535,27 @@
 <main>
 
   <section class="hero">
-    <p class="eyebrow">Family trip &middot; working itinerary</p>
-    <h1>Dublin to Australia, the long way round</h1>
+    <p class="eyebrow">Family trip &middot; comparing two routes</p>
+    <h1>Dublin to Australia, two ways round</h1>
     <p class="lede">
-      Family of four &mdash; two adults, two teens (16 and 12) &mdash; heading out over the
-      Easter break, late March to mid-April 2027. Roughly three and a half weeks, open-jaw:
-      in through Singapore, home from Perth. The brief: as much time in the water, on the trail
-      and outdoors as we can fit &mdash; not wandering around cities.
+      Family of four, over the Irish Easter break, late March to mid-April 2027. Two live
+      options below, same brief for both: outdoors, water and hikes over city time. Toggle
+      between them &mdash; your browser remembers which one you had open.
     </p>
+    <div class="option-toggle" role="group" aria-label="Choose route option">
+      <button type="button" data-option="a" aria-pressed="true"><span>A</span> &middot; via Noosa &amp; the east coast</button>
+      <button type="button" data-option="b" aria-pressed="false"><span>B</span> &middot; via Margaret River</button>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- OPTION A                                                       -->
+  <!-- ============================================================ -->
+  <div class="option-panel" data-option="a">
+
+  <section>
+    <div class="option-panel__head"><h2>Option A</h2><span class="pill">Singapore &middot; Noosa &middot; Sydney &middot; Perth</span></div>
+    <p class="option-blurb">The wildlife-and-foiling route &mdash; a warm-water landing in Noosa, a Northern Beaches base at your own place in Freshwater, a Blue Mountains detour, then Perth and Rottnest to finish.</p>
     <ul class="facts">
       <li><b>~22</b> nights on the ground</li>
       <li><b>6</b> flights + 1 road trip</li>
@@ -612,10 +679,10 @@
             <span class="nights">5 nights</span>
           </div>
           <div class="leg__hop"><svg><use href="#i-plane" /></svg> MCY &rarr; SYD</div>
-          <div class="leg__stay"><b>Stay</b> Freshwater, Northern Beaches &mdash; walk to Manly</div>
+          <div class="leg__stay"><b>Stay</b> Your own place, Freshwater &mdash; walk to Manly</div>
         </div>
         <div class="leg__body">
-          <p class="leg__focus">Based at Freshwater on the Northern Beaches &mdash; ocean on the doorstep, family nearby, and the best coastal walking in the city.</p>
+          <p class="leg__focus">Home base at Freshwater on the Northern Beaches &mdash; ocean on the doorstep, family nearby, and the best coastal walking in the city.</p>
           <ul class="leg__list">
             <li>Manly "Kiddies Corner" surf lesson with <a href="https://www.manlysurfschool.com/">Manly Surf School</a>; snorkel Cabbage Tree Bay / Shelly Beach for blue gropers</li>
             <li><a href="https://www.nationalparks.nsw.gov.au/things-to-do/walking-tracks/manly-scenic-walkway">Spit to Manly</a> track (10 km harbour-bushland walk) and the Manly to North Head circuit</li>
@@ -829,19 +896,6 @@
     </div>
   </section>
 
-  <section class="protocol">
-    <h2><svg><use href="#i-alert" /></svg> Nut allergy protocol</h2>
-    <p>Severe nut allergy, EpiPen carrier. This shapes airline, city and dining choices &mdash; it is not a footnote.</p>
-    <ul>
-      <li><strong>EpiPens</strong> (two, in date) carried in hand luggage at all times, split between two adults. GP letter for airport security.</li>
-      <li><strong>Pre-flag the allergy on every flight booking</strong> &mdash; nut-free meal request, medical notes on the PNR, ask about buffer-zone seating and pre-boarding to wipe the area down.</li>
-      <li><strong>Singapore is deliberate</strong> &mdash; high English fluency, clear packaged-food labelling, staff used to allergy questions.</li>
-      <li>Self-catering via <strong>HomeExchange helps</strong> &mdash; own kitchen for most stays cuts the restaurant risk right down.</li>
-      <li>Carry an <strong>allergy translation / chef card</strong>; know the local emergency number (Singapore 995, Australia 000).</li>
-      <li><strong>Travel insurance</strong> confirmed to cover anaphylaxis and medical evacuation; carry a copy of the policy.</li>
-    </ul>
-  </section>
-
   <section>
     <div class="section-head"><span class="num">06</span><h2>Where we're staying</h2></div>
     <div class="table-wrap">
@@ -851,9 +905,9 @@
         <tbody>
           <tr><td>Singapore</td><td>Clarke Quay or Bugis</td><td class="num">3</td><td>Hotel &mdash; Holiday Inn Express Clarke Quay (IHG) or Mercure Bugis. Too short for an exchange.</td></tr>
           <tr><td>Noosa</td><td>Noosa River / Sunshine Beach</td><td class="num">4</td><td class="tbc">HomeExchange &mdash; searching</td></tr>
-          <tr><td>Sydney</td><td>Freshwater, Northern Beaches</td><td class="num">5</td><td>Known base &mdash; walk to Manly, family nearby</td></tr>
+          <tr><td>Sydney</td><td>Freshwater, Northern Beaches</td><td class="num">5</td><td>Own place &mdash; walk to Manly, family nearby</td></tr>
           <tr><td>Blue Mountains</td><td>Leura or Blackheath</td><td class="num">2</td><td class="tbc">HomeExchange &mdash; searching</td></tr>
-          <tr><td>Mornington</td><td>Mornington</td><td class="num">4</td><td>Known base</td></tr>
+          <tr><td>Mornington</td><td>Mornington</td><td class="num">4</td><td class="tbc">Known base &mdash; own place or exchange, confirm</td></tr>
           <tr><td>Perth</td><td>Cottesloe / Fremantle (TBD)</td><td class="num">4</td><td class="tbc">HomeExchange &mdash; area not fixed yet</td></tr>
         </tbody>
       </table>
@@ -907,20 +961,391 @@
     </ul>
   </section>
 
+  <section class="questions">
+    <h2>Open questions &mdash; Option A</h2>
+    <p>Things in the notes that don't yet line up &mdash; worth settling before the quote request.</p>
+    <ol>
+      <li><strong>Who's travelling?</strong> Earlier notes say two teens (16 and 12); Option B's notes name Bex and Lulu, and Lulu's inflatable-fun link reads younger. Confirm names + ages for both kids so activities, room configs and the HomeExchange search are right &mdash; same question applies to Option B.</li>
+      <li><strong>Return date:</strong> 14 April, or extend Perth to the 18th (Margaret River)? Affects the Perth leg and the flight quote.</li>
+      <li><strong>Perth base:</strong> Cottesloe, Fremantle or near the friends? Needed to start the HomeExchange search.</li>
+      <li><strong>Noosa 15k on 20 March</strong> &mdash; you land on the 26th, so drop it, or is there a later event to chase?</li>
+      <li><strong>Melbourne city time</strong> &mdash; with a Mornington base, is one optional city day enough, or skip it entirely?</li>
+    </ol>
+  </section>
+
+  </div>
+  <!-- ============================================================ -->
+  <!-- OPTION B                                                       -->
+  <!-- ============================================================ -->
+  <div class="option-panel" data-option="b" hidden>
+
   <section>
-    <div class="section-head"><span class="num">09</span><h2>Links &amp; booking pages</h2></div>
+    <div class="option-panel__head"><h2>Option B</h2><span class="pill">Singapore &middot; Margaret River &middot; Melbourne &middot; Sydney</span></div>
+    <p class="option-blurb">The wine-and-friends route &mdash; wakeboarding in Singapore, a week in WA wine country, Mari &amp; Ron's on the Mornington Peninsula, then the longest Sydney stay of either option &mdash; 11 nights at your own place in Freshwater.</p>
+    <ul class="facts">
+      <li><b>~29</b> days door to door</li>
+      <li><b>5+</b> flights &middot; Adelaide leg unconfirmed</li>
+      <li><b>11</b> nights based in Sydney</li>
+      <li><b>2</b> fun runs &middot; <b>1</b> EpiPen, always carried</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">01</span><h2>The route</h2></div>
+    <div class="route-wrap">
+      <div class="route">
+        <div class="node"><span class="code">DUB</span><span class="place">Dublin</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~13h</div>
+        <div class="node"><span class="code">SIN</span><span class="place">Singapore</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~5h</div>
+        <div class="node"><span class="code">PER</span><span class="place">Perth / Margaret River</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>?</div>
+        <div class="node tbd"><span class="code">ADL</span><span class="place">Adelaide?</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~1.5&ndash;4h</div>
+        <div class="node"><span class="code">MEL</span><span class="place">Mornington</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~1.5h</div>
+        <div class="node"><span class="code">SYD</span><span class="place">Freshwater</span></div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~22h+</div>
+        <div class="node"><span class="code">DUB</span><span class="place">Dublin</span></div>
+      </div>
+    </div>
+    <p style="color:var(--ink-soft);font-size:.85rem;margin-top:.9rem">
+      The Adelaide node is dashed on purpose &mdash; it shows up as a Mar 27 flight in the notes but
+      isn't in the named route. See open question 1 below.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">02</span><h2>Timing &amp; season</h2></div>
+    <div class="note">
+      <span class="ic"><svg width="24" height="24"><use href="#i-sun" /></svg></span>
+      <div>
+        <p>
+          Departure is earlier than Option A &mdash; <strong>Friday 19 March 2027</strong> &mdash; landing
+          you in Margaret River for Good Friday (26 Mar) and Easter Monday (29 Mar) as public holidays
+          on the ground, and home <strong>Wed 14 &ndash; Sat 17 April</strong>.
+        </p>
+        <p>
+          Late March in the <strong>South West of WA</strong> is late-summer/early-autumn &mdash; warm
+          days, water still swimmable at Yallingup, harvest season in the vineyards (cellar doors busy).
+          Mornington Peninsula by 30 March is cooling into autumn proper &mdash; layers for the coast.
+          Sydney in the first half of April is mild and settled, the best stretch of the year for the
+          Northern Beaches ocean pools.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">03</span><h2>Leg by leg</h2></div>
+    <div class="legs">
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 1</div>
+          <div class="leg__name">Singapore stopover</div>
+          <div class="leg__meta">
+            <span class="dates">Fri 19 &ndash; Mon 22 Mar</span>
+            <span class="nights">~2 nights</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> DUB &rarr; SIN</div>
+          <div class="leg__stay"><b>Stay</b> Hotel &mdash; TBD</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">Short and active &mdash; get on the water, don't try to see the whole city.</p>
+          <ul class="leg__list">
+            <li>Wakeboard session (operator TBD &mdash; Kallang / East Coast area)</li>
+            <li>If there's a spare half-day: Jewel Changi Rain Vortex, or wild otters at Marina Bay / Kallang at dawn</li>
+          </ul>
+          <div class="tags">
+            <span class="tag" data-k="water">Wakeboard</span>
+            <span class="tag">City stopover</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 2</div>
+          <div class="leg__name">Perth &amp; Margaret River</div>
+          <div class="leg__meta">
+            <span class="dates">Mon 22 &ndash; Sat 27 Mar</span>
+            <span class="nights">~5 nights</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> SIN &rarr; PER, ~5h (overnight/morning)</div>
+          <div class="leg__stay"><b>Stay</b> Rental car; maybe a night with Cindy; rest TBD &mdash; HomeExchange worth trying</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">Wine country and beaches on the west coast &mdash; a car for the week, Yallingup for surf and beach days, Margaret River town for wine, chocolate and caves.</p>
+          <ul class="leg__list">
+            <li>Drive Perth &rarr; Yallingup (~3h) &mdash; a full day of beaches, surf and the sea pools</li>
+            <li>Margaret River town (~3h from Perth) &mdash; high street and the Margaret River Chocolate Factory</li>
+            <li>Vineyards: Vasse Felix, Howard Park, Voyager Estate (built in Cape Dutch / South African style)</li>
+            <li>Vasse Virgin &mdash; the lavender-farm avenue and handmade goods</li>
+            <li>Caves &mdash; pick one (Mammoth, Lake or Ngilgi) on arrival</li>
+            <li>Busselton Jetty on the drive back up to Perth</li>
+            <li>Maybe a night with Cindy along the way</li>
+            <li>Rottnest Island &mdash; TBD, only if it fits around the Perth end of the week</li>
+          </ul>
+          <p style="margin:.7rem 0 0;font-size:.82rem;color:var(--ink-soft)"><strong>Fri 26 Mar is Good Friday</strong> (public holiday) &mdash; book cellar doors and the chocolate factory ahead.</p>
+          <div class="tags">
+            <span class="tag" data-k="wine">Vineyards</span>
+            <span class="tag" data-k="surf">Surf &amp; beaches</span>
+            <span class="tag" data-k="hike">Caves</span>
+            <span class="tag">Friends &mdash; Cindy</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="leg tbd">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 3 &middot; TBD</div>
+          <div class="leg__name">Adelaide (unconfirmed)</div>
+          <div class="leg__meta">
+            <span class="dates">Sat 27 &ndash; Tue 30 Mar</span>
+            <span class="nights">~3 nights &middot; no plan yet</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> PER &rarr; ADL</div>
+          <div class="leg__stay"><b>Stay</b> Not booked</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">This flight is in the notes (27 Mar, Perth &rarr; Adelaide) but Adelaide isn't in the named Option B route, and there's no plan for these 3 nights.</p>
+          <ul class="leg__list">
+            <li>Either this is a real stop that needs a plan, or the domestic hop should run straight Perth &rarr; Melbourne instead &mdash; worth settling before booking (open question 1)</li>
+          </ul>
+          <div class="tags"><span class="tag">Open question</span></div>
+        </div>
+      </article>
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 4</div>
+          <div class="leg__name">Melbourne &amp; Mornington Peninsula</div>
+          <div class="leg__meta">
+            <span class="dates">Tue 30 Mar &ndash; Sat 3 Apr</span>
+            <span class="nights">~4 nights</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> ADL/PER &rarr; MEL, ~1.5&ndash;4h &mdash; or campervan / road trip, ~6h over 2 days (TBD)</div>
+          <div class="leg__stay"><b>Stay</b> With Mari &amp; Ron &mdash; beach hut, ocean toys</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">The slow, restorative stretch of the trip &mdash; wine, hot springs and Mari &amp; Ron's beach hut.</p>
+          <ul class="leg__list">
+            <li>Puffing Billy heritage steam train through the Dandenongs &mdash; a full day out (TBD)</li>
+            <li><a href="https://www.portphillipestate.com.au/">Port Phillip Estate</a> &mdash; the sculpture garden, free live music on weekends</li>
+            <li>More Mornington Peninsula cellar-door lunches</li>
+            <li><a href="https://www.peninsulahotsprings.com/">Peninsula Hot Springs</a> &mdash; the geothermal mineral pools</li>
+            <li>Ocean-toy days at Mari &amp; Ron's beach hut</li>
+          </ul>
+          <p style="margin:.7rem 0 0;font-size:.82rem;color:var(--ink-soft)"><strong>Mon 29 Mar is Easter Monday</strong> (public holiday), right at the start of this leg.</p>
+          <div class="tags">
+            <span class="tag" data-k="wine">Wineries</span>
+            <span class="tag">Friends &mdash; Mari &amp; Ron</span>
+            <span class="tag" data-k="water">Hot springs</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 5</div>
+          <div class="leg__name">Sydney &amp; the Northern Beaches</div>
+          <div class="leg__meta">
+            <span class="dates">Sat 3 &ndash; Wed 14 Apr</span>
+            <span class="nights">11 nights &mdash; longest stay of the trip</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> MEL &rarr; SYD, ~1.5h</div>
+          <div class="leg__stay"><b>Stay</b> Your own place, Freshwater</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">Home base for the back half of the trip &mdash; running, surfing, friends, and a concert to lock in.</p>
+          <ul class="leg__list">
+            <li><strong>Sun 4 Apr</strong> &mdash; <a href="https://sydney.run2cure.org.au/">Run2Cure Neuroblastoma</a> 10k. Bex would love this &mdash; there's a medal</li>
+            <li>5&ndash;9 Apr &mdash; Ross &amp; Claire working some days; surfing Freshwater and exploring</li>
+            <li>Bike trails around Manly Dam</li>
+            <li>Ocean pools &mdash; an easy walk to the Freshwater pool; more of the <a href="https://www.sydney.com/destinations/sydney/sydney-north/northern-beaches/activities">Northern Beaches</a> to explore</li>
+            <li>TBD &mdash; 7/8 or 10/11 Apr: Rufus Wainwright at the Sydney Opera House, show still to pick</li>
+            <li><strong>10 Apr</strong> &mdash; Claire / Aluna Holidays: possible road trip or day out with the gang</li>
+            <li><strong>10 Apr, 7am</strong> &mdash; Curl Curl parkrun</li>
+            <li>Lulu-friendly: <a href="https://www.northernbeaches.nsw.gov.au/things-to-do/whats-on/school-holiday-inflatable-fun">school-holiday inflatable fun</a>; a treetop ropes course</li>
+            <li>Bigger swing, still open: a Blue Mountains overnight, or another road trip</li>
+          </ul>
+          <div class="tags">
+            <span class="tag" data-k="run">Fun run &times;2</span>
+            <span class="tag" data-k="surf">Surf</span>
+            <span class="tag">Concert TBD</span>
+            <span class="tag">Friends &mdash; Ross, Claire, Aluna</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="leg">
+        <div class="leg__stub">
+          <div class="leg__label">Leg 6</div>
+          <div class="leg__name">The flight home</div>
+          <div class="leg__meta">
+            <span class="dates">Wed 14 &ndash; Sat 17 Apr</span>
+            <span class="nights">flights &amp; stopover TBD</span>
+          </div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> SYD &rarr; DUB, stopover TBD</div>
+          <div class="leg__stay"><b>Home</b> school back ~13 Apr, so this return runs a few days late either way</div>
+        </div>
+        <div class="leg__body">
+          <p class="leg__focus">Least-planned part of Option B &mdash; three days pencilled in for the trip home with nothing fixed yet.</p>
+          <ul class="leg__list">
+            <li>Route, stopover and exact flight dates all still open</li>
+          </ul>
+          <div class="tags"><span class="tag">Open question</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">04</span><h2>Wine, runs &amp; wildlife</h2></div>
+
+    <div class="table-wrap" style="margin-bottom:1.2rem">
+      <table>
+        <caption>Margaret River cellar doors on the list</caption>
+        <thead><tr><th>Stop</th><th>Known for</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://www.vassefelix.com.au/">Vasse Felix</a></td><td>One of the region's founding wineries; restaurant + gallery</td></tr>
+          <tr><td><a href="https://www.howardparkwines.com.au/">Howard Park</a></td><td>Cellar door and terrace views over the vines</td></tr>
+          <tr><td><a href="https://www.voyagerestate.com.au/">Voyager Estate</a></td><td>Cape Dutch / South African-style buildings and rose gardens</td></tr>
+          <tr><td><a href="https://www.vassevirgin.com.au/">Vasse Virgin</a></td><td>Lavender farm, handmade soaps and oils, the avenue</td></tr>
+          <tr><td>Margaret River Chocolate Factory</td><td>Tastings and a shop on the high street &mdash; call ahead re: nuts (see protocol below)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Fun runs &mdash; two this time</h3>
+        <p class="sub">Sydney, both in the second week</p>
+        <p><a href="https://sydney.run2cure.org.au/">Run2Cure Neuroblastoma</a> 10k, Sun 4 Apr &mdash; Bex's medal run. <a href="https://www.parkrun.com.au/curlcurl/">Curl Curl parkrun</a>, Sat 10 Apr, 7am &mdash; free, needs a parkrun barcode registered in advance.</p>
+      </div>
+      <div class="card">
+        <h3>Wildlife along the way</h3>
+        <p class="sub">Lighter on wildlife than Option A, but still real chances</p>
+        <p>Kangaroos in the Boranup karri forest near Margaret River; quokkas if Rottnest fits in; kangaroos at dawn in Greens Bush and seadragons/seals on a Mornington kayak; blue gropers and a little-penguin colony at Manly.</p>
+      </div>
+      <div class="card">
+        <h3>Concert &mdash; Rufus Wainwright</h3>
+        <p class="sub">Sydney Opera House &middot; date TBD</p>
+        <p>Two candidate windows, 7/8 or 10/11 Apr &mdash; different shows on each, so pick the night before booking. Worth checking it doesn't clash with the parkrun or the Aluna Holidays day.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">05</span><h2>Where we're staying</h2></div>
+    <div class="table-wrap">
+      <table>
+        <caption>More staying with people this time &mdash; fewer nights to book</caption>
+        <thead><tr><th>Leg</th><th>Base</th><th>Nights</th><th>Plan</th></tr></thead>
+        <tbody>
+          <tr><td>Singapore</td><td>TBD</td><td class="num">~2</td><td class="tbc">Hotel &mdash; not chosen yet</td></tr>
+          <tr><td>Perth / Margaret River</td><td>Yallingup / Margaret River area</td><td class="num">~5</td><td class="tbc">Rental car; a night with Cindy possible; rest via HomeExchange or hotel, TBD</td></tr>
+          <tr><td>Adelaide</td><td>&mdash;</td><td class="num">~3</td><td class="tbc">Unconfirmed &mdash; see open question 1</td></tr>
+          <tr><td>Melbourne / Mornington</td><td>Mornington Peninsula</td><td class="num">~4</td><td>With Mari &amp; Ron</td></tr>
+          <tr><td>Sydney</td><td>Freshwater, Northern Beaches</td><td class="num">11</td><td>Own place</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">06</span><h2>Budget &mdash; to be filled in</h2></div>
+    <div class="table-wrap" style="margin-bottom:1.2rem">
+      <table>
+        <caption>Flights &mdash; can only be quoted once the Adelaide question is settled</caption>
+        <thead><tr><th>Segment</th><th>Notes</th><th>Est. (party of 4)</th></tr></thead>
+        <tbody>
+          <tr><td>DUB &rarr; SIN &rarr; PER</td><td>Long-haul, short Singapore stopover</td><td class="num tbc">quote pending</td></tr>
+          <tr><td>PER &rarr; (ADL) &rarr; MEL &rarr; SYD</td><td>Domestic hops &mdash; depends on whether Adelaide stays in</td><td class="num tbc">quote pending</td></tr>
+          <tr><td>SYD &rarr; DUB</td><td>Route and stopover both open</td><td class="num tbc">quote pending</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <caption>Known or likely costs, AUD, party of 4 unless noted</caption>
+        <thead><tr><th>Item</th><th>Who</th><th>Cost</th></tr></thead>
+        <tbody>
+          <tr><td>Wakeboard session, Singapore</td><td>Family</td><td class="num tbc">TBC &mdash; operator not chosen</td></tr>
+          <tr><td>Margaret River cellar door tastings &times; 3&ndash;4</td><td>Adults, mostly</td><td class="num tbc">TBC</td></tr>
+          <tr><td>Rental car, Perth region, ~1 week</td><td>&mdash;</td><td class="num tbc">TBC</td></tr>
+          <tr><td>Run2Cure entry</td><td>Whoever's running</td><td class="num tbc">TBC</td></tr>
+          <tr><td>Curl Curl parkrun</td><td>Family</td><td class="num">Free (register a barcode first)</td></tr>
+          <tr><td>Rufus Wainwright tickets &times; 4</td><td>Family</td><td class="num tbc">TBC once show is picked</td></tr>
+          <tr><td>Peninsula Hot Springs</td><td>Family</td><td class="num tbc">TBC</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">07</span><h2>Next steps</h2></div>
+    <ul class="checklist">
+      <li><span class="box"></span><div><span class="who">Route</span>Resolve the Adelaide question first &mdash; it decides the whole PER&rarr;MEL flight quote.</div></li>
+      <li><span class="box"></span><div><span class="who">Flights</span>Once Adelaide is settled, get the open-jaw quote: DUB&rarr;SIN&rarr;PER &hellip; SYD&rarr;DUB.</div></li>
+      <li><span class="box"></span><div><span class="who">Margaret River</span>Confirm dates with Cindy; decide Yallingup/Margaret River accommodation (HomeExchange vs hotel); check whether Rottnest fits.</div></li>
+      <li><span class="box"></span><div><span class="who">Melbourne</span>Confirm dates with Mari &amp; Ron; decide fly vs campervan/road-trip for the Melbourne leg.</div></li>
+      <li><span class="box"></span><div><span class="who">Concert</span>Pick a Rufus Wainwright show (7/8 or 10/11 Apr) and book before seats go.</div></li>
+      <li><span class="box"></span><div><span class="who">Sydney</span>Ask Claire about the Aluna Holidays day/road trip on 10 Apr; register for Curl Curl parkrun (barcode) and Run2Cure.</div></li>
+      <li><span class="box"></span><div><span class="who">Allergy</span>Pre-flag on every booking; call ahead to the Margaret River Chocolate Factory and cellar-door lunches specifically.</div></li>
+      <li><span class="box"></span><div><span class="who">Return</span>Lock down the 14&ndash;17 Apr flight home and any stopover.</div></li>
+    </ul>
+  </section>
+
+  <section class="questions">
+    <h2>Open questions &mdash; Option B</h2>
+    <p>Bigger gaps than Option A &mdash; this route is earlier in its planning.</p>
+    <ol>
+      <li><strong>Adelaide</strong> &mdash; not in the named route, but a 27 Mar Perth&rarr;Adelaide flight and a 30 Mar Melbourne flight bookend three unplanned nights. Real stop, or should it just be Perth&rarr;Melbourne direct?</li>
+      <li><strong>Who's travelling?</strong> This plan names Bex and Lulu; the inflatable-fun link suggests Lulu is younger than the "12-year-old" in Option A's notes. Confirm names and ages for both kids &mdash; same question as Option A.</li>
+      <li><strong>Melbourne leg mode</strong> &mdash; fly (~1.5&ndash;4h depending on origin) or campervan/road trip (~6h over 2 days)?</li>
+      <li><strong>Concert night</strong> &mdash; 7/8 or 10/11 April, and which Rufus Wainwright show?</li>
+      <li><strong>Return flight</strong> &mdash; 14&ndash;17 April window is open; route and stopover both TBD.</li>
+      <li><strong>Rottnest</strong> &mdash; fit it into the Perth/Margaret River week, or drop it this time?</li>
+    </ol>
+  </section>
+
+  </div>
+
+  <section class="protocol">
+    <h2><svg><use href="#i-alert" /></svg> Nut allergy protocol</h2>
+    <p>Severe nut allergy, EpiPen carrier. Applies to whichever option we land on &mdash; this shapes airline, city and dining choices, it is not a footnote.</p>
+    <ul>
+      <li><strong>EpiPens</strong> (two, in date) carried in hand luggage at all times, split between two adults. GP letter for airport security.</li>
+      <li><strong>Pre-flag the allergy on every flight booking</strong> &mdash; nut-free meal request, medical notes on the PNR, ask about buffer-zone seating and pre-boarding to wipe the area down.</li>
+      <li><strong>Singapore is deliberate</strong> &mdash; high English fluency, clear packaged-food labelling, staff used to allergy questions.</li>
+      <li>Self-catering via <strong>HomeExchange helps</strong> &mdash; own kitchen for most stays cuts the restaurant risk right down.</li>
+      <li><strong>Wineries and chocolate factories are a specific risk</strong> (Option B) &mdash; cellar-door platters and chocolate production lines are high cross-contamination territory. Call the Margaret River Chocolate Factory and any cellar-door lunch ahead.</li>
+      <li>Carry an <strong>allergy translation / chef card</strong>; know the local emergency number (Singapore 995, Australia 000).</li>
+      <li><strong>Travel insurance</strong> confirmed to cover anaphylaxis and medical evacuation; carry a copy of the policy.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">&middot;</span><h2>Links &amp; booking pages</h2></div>
     <div class="cards">
       <div class="card">
         <h3>Water &amp; adventure</h3>
         <p><a href="https://fliteschool.com/">Fliteschool Noosa</a> &middot; <a href="https://gorideawave.com.au/surf-lessons/noosa/">Go Ride A Wave</a> &middot; <a href="https://www.manlysurfschool.com/">Manly Surf School</a> &middot; <a href="https://www.gosurf.com.au/">Go Surf Perth</a> &middot; <a href="https://bayplay.com.au/">Bayplay (Mornington kayak)</a> &middot; <a href="https://www.rockinghamwildencounters.com.au/">Penguin Island kayak</a> &middot; <a href="https://www.highnwild.com.au/">High &amp; Wild (canyoning)</a></p>
       </div>
       <div class="card">
-        <h3>Parks &amp; trails</h3>
-        <p><a href="https://parks.desi.qld.gov.au/parks/noosa">Noosa NP</a> &middot; <a href="https://www.nationalparks.nsw.gov.au/visit-a-park/parks/blue-mountains-national-park">Blue Mountains NP</a> &middot; <a href="https://www.scenicworld.com.au/">Scenic World</a> &middot; <a href="https://www.parks.vic.gov.au/places-to-see/parks/mornington-peninsula-national-park">Mornington Peninsula NP</a> &middot; <a href="https://www.rottnestisland.com/">Rottnest Island</a> &middot; <a href="https://www.bgpa.wa.gov.au/kings-park">Kings Park</a> &middot; <a href="https://www.nparks.gov.sg/">NParks Singapore</a></p>
+        <h3>Wine &amp; food (Option B)</h3>
+        <p><a href="https://www.vassefelix.com.au/">Vasse Felix</a> &middot; <a href="https://www.howardparkwines.com.au/">Howard Park</a> &middot; <a href="https://www.voyagerestate.com.au/">Voyager Estate</a> &middot; <a href="https://www.vassevirgin.com.au/">Vasse Virgin</a> &middot; <a href="https://www.portphillipestate.com.au/">Port Phillip Estate</a></p>
       </div>
       <div class="card">
-        <h3>Runs, stays &amp; booking</h3>
-        <p><a href="https://sydney.run2cure.org.au/">Run2Cure Sydney</a> &middot; <a href="https://www.homeexchange.com/">HomeExchange</a> &middot; <a href="https://www.trailfinders.ie/">Trailfinders</a> &middot; <a href="https://www.peninsulahotsprings.com/">Peninsula Hot Springs</a></p>
+        <h3>Parks &amp; trails</h3>
+        <p><a href="https://parks.desi.qld.gov.au/parks/noosa">Noosa NP</a> &middot; <a href="https://www.nationalparks.nsw.gov.au/visit-a-park/parks/blue-mountains-national-park">Blue Mountains NP</a> &middot; <a href="https://www.scenicworld.com.au/">Scenic World</a> &middot; <a href="https://www.parks.vic.gov.au/places-to-see/parks/mornington-peninsula-national-park">Mornington Peninsula NP</a> &middot; <a href="https://www.puffingbilly.com.au/">Puffing Billy</a> &middot; <a href="https://www.busseltonjetty.com.au/">Busselton Jetty</a> &middot; <a href="https://www.rottnestisland.com/">Rottnest Island</a> &middot; <a href="https://www.bgpa.wa.gov.au/kings-park">Kings Park</a> &middot; <a href="https://www.nparks.gov.sg/">NParks Singapore</a></p>
+      </div>
+      <div class="card">
+        <h3>Runs, tickets &amp; booking</h3>
+        <p><a href="https://sydney.run2cure.org.au/">Run2Cure Sydney</a> &middot; <a href="https://www.parkrun.com.au/curlcurl/">Curl Curl parkrun</a> &middot; <a href="https://www.sydneyoperahouse.com/">Sydney Opera House</a> &middot; <a href="https://www.northernbeaches.nsw.gov.au/things-to-do/whats-on/school-holiday-inflatable-fun">Northern Beaches school holidays</a> &middot; <a href="https://www.sydney.com/destinations/sydney/sydney-north/northern-beaches/activities">Northern Beaches activities</a> &middot; <a href="https://www.homeexchange.com/">HomeExchange</a> &middot; <a href="https://www.trailfinders.ie/">Trailfinders</a> &middot; <a href="https://www.peninsulahotsprings.com/">Peninsula Hot Springs</a></p>
       </div>
       <div class="card">
         <h3>Photos &amp; video</h3>
@@ -929,23 +1354,29 @@
     </div>
   </section>
 
-  <section class="questions">
-    <h2>Open questions</h2>
-    <p>Things in the notes that don't yet line up &mdash; worth settling before the quote request.</p>
-    <ol>
-      <li><strong>Who's travelling?</strong> The plan says two teens (16 and 12), but an earlier note mentioned a 5-year-old. Confirm the party &mdash; it changes activities, room configs and the HomeExchange search.</li>
-      <li><strong>Return date:</strong> 14 April, or extend Perth to the 18th (Margaret River)? Affects the Perth leg and the flight quote.</li>
-      <li><strong>Perth base:</strong> Cottesloe, Fremantle or near the friends? Needed to start the HomeExchange search.</li>
-      <li><strong>Noosa 15k on 20 March</strong> &mdash; you land on the 26th, so drop it, or is there a later event to chase?</li>
-      <li><strong>Melbourne city time</strong> &mdash; with a Mornington base, is one optional city day enough, or skip it entirely?</li>
-    </ol>
-  </section>
-
 </main>
 
 <footer>
-  Draft working itinerary &mdash; dates, order, stays and prices are all still moving.<br />
-  Last updated 5 September 2026. Built for the family; not for wider sharing until the plan firms up.
+  Draft working itinerary, two options &mdash; dates, order, stays and prices are all still moving.<br />
+  Last updated 27 September 2026. Built for the family; not for wider sharing until the plan firms up.
 </footer>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.option-toggle button');
+  var panels = document.querySelectorAll('.option-panel');
+  function show(opt) {
+    panels.forEach(function (p) { p.hidden = p.dataset.option !== opt; });
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.option === opt ? 'true' : 'false'); });
+    try { localStorage.setItem('trip-option-2027', opt); } catch (e) {}
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { show(b.dataset.option); });
+  });
+  var saved = null;
+  try { saved = localStorage.getItem('trip-option-2027'); } catch (e) {}
+  show(saved === 'b' ? 'b' : 'a');
+})();
+</script>
 </body>
 </html>
