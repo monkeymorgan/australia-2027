@@ -219,6 +219,7 @@
   }
   .option-toggle button[data-option="a"] em { background: var(--alert-bg); color: var(--alert-ink); }
   .option-toggle button[data-option="b"] em { background: var(--teal-deep); color: var(--surface); }
+  .option-toggle button[data-option="c"] em { background: var(--surface); color: var(--ink-soft); border: 1px solid var(--line); }
   .option-blurb { font-size: .85rem; color: var(--ink-soft); max-width: 46ch; }
 
   .status-banner {
@@ -615,12 +616,13 @@
     <h1>Dublin to Australia, two ways round</h1>
     <p class="lede">
       Family of four, over the Irish Easter break, late March to mid-April 2027. <strong>Option B is
-      the preferred plan</strong> &mdash; Option A is kept below for reference, marked as rejected.
+      the preferred plan</strong> &mdash; Option A is kept for reference, marked as rejected, and Option C is Trailfinders' itinerary priced direct for comparison.
       Toggle between them &mdash; your browser remembers which one you had open.
     </p>
     <div class="option-toggle" role="group" aria-label="Choose route option">
       <button type="button" data-option="a" aria-pressed="false"><span>A</span> &middot; via Noosa &amp; the east coast <em>rejected</em></button>
       <button type="button" data-option="b" aria-pressed="true"><span>B</span> &middot; via Margaret River <em>preferred</em></button>
+      <button type="button" data-option="c" aria-pressed="false"><span>C</span> &middot; Trailfinders itinerary <em>for comparison</em></button>
     </div>
   </section>
 
@@ -1329,8 +1331,8 @@
           <div class="leg__label">Leg 6</div>
           <div class="leg__name">The flight home</div>
           <div class="leg__meta">
-            <span class="dates">Wed 14 Apr, or up to 5 days later</span>
-            <span class="nights">window 14&ndash;19 Apr</span>
+            <span class="dates">Fri 16 Apr (ideal), window 14&ndash;19</span>
+            <span class="nights">land Dublin 17&ndash;18 Apr</span>
           </div>
           <div class="leg__hop"><svg><use href="#i-plane" /></svg> SYD &rarr; DUB, fewest stops (1 stop, ~24h)</div>
           <div class="leg__stay"><b>Home</b> school leave needed from ~5 Apr</div>
@@ -1338,7 +1340,8 @@
         <div class="leg__body">
           <p class="leg__focus">Straight home, no stopover. Sydney to Dublin has no nonstop, so the best you get is one connection &mdash; and in practice that means a Gulf hub.</p>
           <ul class="leg__list">
-            <li>The cheapest 1-stop is Qatar via Doha at &euro;2,822 for four, flat across the whole 14&ndash;19 Apr window &mdash; so pick the date for the trip, not the fare</li>
+            <li>The cheapest 1-stop is Qatar via Doha at &euro;2,822 for four on 14 Apr and &euro;2,925 on 16 Apr &mdash; so pick the date for the trip, not the fare</li>
+            <li>Your ideal is to land in Dublin on 17 or 18 Apr, which means leaving Sydney on 16 or 17: Qatar &euro;2,925 on 16 Apr, or Etihad's 3:40pm flight at &euro;2,989 (lands 7:15am Sat 17)</li>
             <li>Gulf-free routings all need two stops and cost &euro;3,400 or more &mdash; see Budget for the trade-off and how flexible each airline is</li>
           </ul>
           <div class="tags"><span class="tag">Decision</span></div>
@@ -1429,7 +1432,7 @@
           <tr><td>3 alt</td><td>PER &rarr; MEL direct <span class="tbc">(if Adelaide is skipped)</span></td><td>27 Mar 2027</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20PER%20to%20MEL%20on%202027-03-27%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
           <tr><td>4</td><td>ADL &rarr; MEL</td><td>30 Mar 2027</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20ADL%20to%20MEL%20on%202027-03-30%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
           <tr><td>5</td><td>MEL &rarr; SYD</td><td>3 Apr 2027</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20MEL%20to%20SYD%20on%202027-04-03%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
-          <tr><td>6</td><td>SYD &rarr; DUB</td><td>14 Apr 2027 (up to 5 days later)</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20SYD%20to%20DUB%20on%202027-04-14%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
+          <tr><td>6</td><td>SYD &rarr; DUB</td><td>16 Apr 2027 (ideal: leave 16&ndash;17, land 17&ndash;18)</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20SYD%20to%20DUB%20on%202027-04-16%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
         </tbody>
       </table>
     </div>
@@ -1514,12 +1517,102 @@
     <h2>Open questions &mdash; Option B</h2>
     <p>Most of the earlier gaps are closed &mdash; what's left is mostly choices.</p>
     <ol>
+      <li><strong>Home date</strong> &mdash; leave Sydney 16 April and land on the 17th, as you'd prefer? Sydney becomes 13 nights instead of 11, and Qatar costs about &euro;100 more than on 14 April.</li>
       <li><strong>Outbound date</strong> &mdash; keep 19 March, or leave ~4 days later and save about &euro;580? Later moves every date after it.</li>
       <li><strong>Flight home</strong> &mdash; Qatar (cheapest 1-stop, no special flexibility), Emirates (about &euro;950 more, one free change), or a Gulf-free routing with two stops (&euro;3,400+)?</li>
       <li><strong>Singapore</strong> &mdash; HomeExchange (few homes, and only a 2-night-minimum one fits) or a hotel family room at about &euro;250&ndash;300 a night?</li>
       <li><strong>Adelaide car hire</strong> &mdash; hire one for the three nights, or rely on the tram, taxis and tours? Not priced yet. The three nights themselves are kept, with nothing planned.</li>
       <li><strong>Concert night</strong> &mdash; 7/8 or 10/11 April, and which Rufus Wainwright show?</li>
       <li><strong>Rottnest and Caversham</strong> &mdash; the draft gives them Mon 22&ndash;Tue 23 in Perth and leaves Margaret River 3 nights (24&ndash;27). Happy with that, or take a day from Adelaide or Mornington?</li>
+    </ol>
+  </section>
+
+  </div>
+
+  <div class="option-panel" data-option="c" hidden>
+
+  <section>
+    <div class="option-panel__head"><h2>Option C</h2><span class="pill">For comparison</span><span class="pill">Trailfinders itinerary, priced direct</span></div>
+    <p class="option-blurb">Trailfinders' proposed flights and Singapore hotel, priced as if booked direct. Their itinerary had no prices, so these are Google Flights and Google Hotels figures for four people. From Perth onwards the plan is Option B's.</p>
+    <ul class="facts">
+      <li><b>&euro;7,652</b> quoted by Trailfinders</li>
+      <li><b>&euro;6,448</b> for the three flights, direct</li>
+      <li><b>Etihad</b> both ways, via Abu Dhabi</li>
+      <li>Land in Dublin <b>Sat 17 Apr</b></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">01</span><h2>What Trailfinders proposed</h2></div>
+    <div class="table-wrap">
+      <table>
+        <caption>Priced as if booked direct, 4 adults, Google Flights and Google Hotels on 12 Oct 2026. Airport transfers left out, as you suggested.</caption>
+        <thead><tr><th>When</th><th>What</th><th>Times</th><th>Direct price, four</th><th>Check</th></tr></thead>
+        <tbody>
+          <tr><td>Fri 19 Mar</td><td>Etihad EY046 Dublin &rarr; Abu Dhabi, then EY498 Abu Dhabi &rarr; Singapore</td><td>08:05 &rarr; 19:30, then 22:05 &rarr; 09:35 Sat 20</td><td class="num">&euro;2,292</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20DUB%20to%20SIN%20on%202027-03-19%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
+          <tr><td>Sat 20 &ndash; Mon 22 Mar</td><td>PARKROYAL on Beach Road, 2 nights</td><td>&mdash;</td><td class="num">about &euro;354 for one room (&euro;177 a night, breakfast extra), &euro;708 for two. Your own check was nearer &euro;300 a night</td><td class="linkcell"><a href="https://www.google.com/travel/search?q=PARKROYAL%20on%20Beach%20Road%20Singapore%20check%20in%202027-03-20%20check%20out%202027-03-22%202%20adults%202%20children">Google Hotels &rarr;</a></td></tr>
+          <tr><td>Mon 22 Mar</td><td>Singapore Airlines SQ223 Singapore &rarr; Perth</td><td>09:30 &rarr; 14:45</td><td class="num">&euro;1,167</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20SIN%20to%20PER%20on%202027-03-22%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
+          <tr><td>Fri 16 Apr</td><td>Etihad EY451 Sydney &rarr; Abu Dhabi, then Sat 17 Apr EY045 Abu Dhabi &rarr; Dublin</td><td>15:40 &rarr; 00:05 Sat, then 02:10 &rarr; 07:15 Sat 17</td><td class="num">&euro;2,989</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20SYD%20to%20DUB%20on%202027-04-16%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
+          <tr><td>Singapore</td><td>Airport transfers, both ways</td><td>&mdash;</td><td class="num tbc">left out, not priced</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="linkbox-note">The three flights come to <strong>&euro;6,448</strong>. Etihad's own site may show fare brands with different bag and change terms, which I haven't checked. The Perth&rarr;Adelaide, Adelaide&rarr;Melbourne and Melbourne&rarr;Sydney flights aren't in the Trailfinders itinerary, so they're booked separately as in Option B.</p>
+
+    <div class="table-wrap" style="margin-top:1.2rem">
+      <table>
+        <caption>The Trailfinders quote against booking it yourself (assuming &euro;7,652 is the total for the four of you)</caption>
+        <thead><tr><th>Way of booking it</th><th>Flights</th><th>Hotel, 2 nights</th><th>Total</th><th>Quote is higher by</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Trailfinders quote</strong> (with transfers)</td><td colspan="2">flights, hotel and airport transfers</td><td class="num"><strong>&euro;7,652</strong></td><td></td></tr>
+          <tr><td>This itinerary, direct, one hotel room</td><td class="num">&euro;6,448</td><td class="num">&euro;354</td><td class="num">&euro;6,802</td><td class="num">&euro;850</td></tr>
+          <tr><td>This itinerary, direct, two hotel rooms</td><td class="num">&euro;6,448</td><td class="num">&euro;708</td><td class="num">&euro;7,156</td><td class="num">&euro;496</td></tr>
+          <tr><td>The Option B way (cheaper flights, family room at &euro;250&ndash;300)</td><td class="num">&euro;5,930</td><td class="num">&euro;500&ndash;600</td><td class="num">&euro;6,430&ndash;6,530</td><td class="num">&euro;1,120&ndash;1,220</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="linkbox-note">So booking these same flights and hotel direct looks about &euro;500&ndash;850 cheaper, before the transfers. Two one-way airport transfers should cost a small fraction of that, so the rest is Trailfinders' margin and handling &mdash; ask for the breakdown. The hotel figures are Google's room-only &quot;from&quot; prices, not a family-room rate.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">02</span><h2>Priced direct vs Option B</h2></div>
+    <div class="table-wrap">
+      <table>
+        <caption>Like for like, 4 adults. Option B uses the 11:25am Singapore&rarr;Perth flight (bag extra) and a 16 Apr return, so it differs slightly from the Budget table.</caption>
+        <thead><tr><th>Leg</th><th>Trailfinders itinerary, direct</th><th>Option B choice</th><th>Difference</th></tr></thead>
+        <tbody>
+          <tr><td>Dublin &rarr; Singapore</td><td>Etihad via Abu Dhabi &euro;2,292</td><td>Turkish via Istanbul &euro;2,357</td><td class="num">&minus;&euro;65</td></tr>
+          <tr><td>Singapore &rarr; Perth</td><td>Singapore Airlines, 09:30 &euro;1,167</td><td>11:25am budget flight &euro;588, plus ~&euro;60 bag</td><td class="num">+&euro;519</td></tr>
+          <tr><td>Sydney &rarr; Dublin, 16 Apr</td><td>Etihad via Abu Dhabi &euro;2,989</td><td>Qatar via Doha &euro;2,925</td><td class="num">+&euro;64</td></tr>
+          <tr><td><strong>These three</strong></td><td class="num"><strong>&euro;6,448</strong></td><td class="num"><strong>&euro;5,930</strong></td><td class="num"><strong>+&euro;518</strong></td></tr>
+          <tr><td>Australian hops + bags (both)</td><td colspan="2">Perth&rarr;Adelaide &euro;514, Adelaide&rarr;Melbourne &euro;308, Melbourne&rarr;Sydney &euro;303, plus three bags at &euro;60</td><td class="num">&euro;1,305</td></tr>
+          <tr><td><strong>Whole trip, flights</strong></td><td class="num"><strong>&euro;7,753</strong></td><td class="num"><strong>&euro;7,235</strong></td><td class="num"><strong>+&euro;518</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="linkbox-note">Almost all of the gap is the Singapore Airlines flight to Perth. If it includes a checked bag (unconfirmed), the real gap is nearer &euro;460. Hotels are close: PARKROYAL at about &euro;354&ndash;708 against about &euro;500&ndash;600 for Option B's family room, depending on how many rooms. Booking direct also means you give up whatever protection and change handling Trailfinders include &mdash; worth asking what that is.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num">03</span><h2>What it changes elsewhere</h2></div>
+    <ul class="checklist">
+      <li><span class="box"></span><div><span class="who">Home date</span>You land in Dublin Saturday 17 April at 07:15 &mdash; your ideal. Sydney becomes 13 nights (3&ndash;16 Apr) instead of 11.</div></li>
+      <li><span class="box"></span><div><span class="who">Perth Monday</span>SQ223 lands at 14:45, so Caversham (last entry 3pm) can't happen on Monday. Rottnest on Tuesday still works; Caversham would need Tuesday morning or to go.</div></li>
+      <li><span class="box"></span><div><span class="who">Jet lag</span>The Abu Dhabi &rarr; Singapore leg leaves at 22:05 and lands at 09:35, a proper night flight. You arrive before hotel check-in time, so ask for early check-in or bag storage.</div></li>
+      <li><span class="box"></span><div><span class="who">Gulf risk</span>Both long-hauls go through Abu Dhabi. I couldn't confirm Etihad's current change or refund terms, so ask Trailfinders for the fare rules.</div></li>
+    </ul>
+  </section>
+
+  <section class="questions">
+    <h2>Questions for Trailfinders</h2>
+    <p>Things in the itinerary that look odd, plus what's missing.</p>
+    <ol>
+      <li><strong>The &euro;7,652</strong> &mdash; can they break it down into flights, hotel, transfers and their fee? Direct, the flights are &euro;6,448 and the hotel &euro;354&ndash;708.</li>
+      <li><strong>The hotel appears twice</strong> &mdash; PARKROYAL is listed as two separate 2-night bookings. One room or two, or a duplicate?</li>
+      <li><strong>The transfer date</strong> &mdash; the hotel-to-airport transfer is dated Sunday 21 March, but the Singapore Airlines flight is Monday 22 March at 09:30.</li>
+      <li><strong>Fare rules</strong> &mdash; what bags are included on Etihad and Singapore Airlines, and what are the change and refund terms and fees?</li>
+      <li><strong>Protection</strong> &mdash; what financial protection and change handling come with booking through them, compared with booking direct?</li>
+      <li><strong>Transfers</strong> &mdash; what do they cost, and are they worth it for a morning arrival?</li>
     </ol>
   </section>
 
@@ -1586,7 +1679,7 @@
   });
   var saved = null;
   try { saved = localStorage.getItem('trip-option-2027'); } catch (e) {}
-  show(saved === 'a' ? 'a' : 'b');
+  show(saved === 'a' || saved === 'c' ? saved : 'b');
 })();
 </script>
 </body>
