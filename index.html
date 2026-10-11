@@ -504,6 +504,11 @@
   .transport-opt h4 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 1.05rem; margin: 0 0 .35rem; }
   .transport-opt p { margin: 0; font-size: .85rem; color: var(--ink-soft); }
   .transport-opt a.linkout { display: inline-block; margin-top: .6rem; font-size: .8rem; font-weight: 500; }
+  .discarded { border: 1px dashed var(--line); border-radius: 12px; padding: .8rem 1.1rem; background: var(--surface-sunk); margin: 0 0 1.1rem; }
+  .discarded summary { cursor: pointer; font-family: "IBM Plex Mono", Menlo, monospace; font-size: .76rem; letter-spacing: .04em; color: var(--ink-soft); }
+  .discarded ul { margin: .8rem 0 0; padding-left: 1.1rem; color: var(--ink-soft); }
+  .discarded li { margin: .25rem 0; }
+  .discarded p { margin: .7rem 0 0; font-size: .82rem; color: var(--ink-soft); }
 
   /* ---------- link-out tables (flights, home exchange) ---------- */
   td.linkcell a { font-size: .84rem; font-weight: 500; white-space: nowrap; }
@@ -1061,11 +1066,11 @@
   <div class="option-panel" data-option="b">
 
   <section>
-    <div class="option-panel__head"><h2>Option B</h2><span class="pill pill--preferred">Preferred</span><span class="pill">Singapore &middot; Margaret River &middot; Great Ocean Road &middot; Sydney</span></div>
-    <p class="option-blurb">The friends-and-coast route &mdash; an extra day in Singapore, the Margaret River coast and caves, a self-drive from Adelaide along the Great Ocean Road to Mari &amp; Ron's on the Mornington Peninsula, then 11 nights with Claire, Ross and Lulu in Freshwater.</p>
+    <div class="option-panel__head"><h2>Option B</h2><span class="pill pill--preferred">Preferred</span><span class="pill">Singapore &middot; Margaret River &middot; Adelaide &middot; Mornington &middot; Sydney</span></div>
+    <p class="option-blurb">The friends-and-coast route &mdash; an extra day in Singapore, the Margaret River coast and caves, three nights in Adelaide, Mari &amp; Ron's on the Mornington Peninsula, then 11 nights with Claire, Ross and Lulu in Freshwater.</p>
     <ul class="facts">
       <li><b>~29</b> days door to door</li>
-      <li><b>5</b> flights + a 4-day road trip</li>
+      <li><b>6</b> flights &middot; no long drives</li>
       <li><b>11</b> nights based in Sydney</li>
       <li><b>2</b> fun runs &middot; <b>1</b> EpiPen, always carried</li>
     </ul>
@@ -1082,7 +1087,7 @@
         <div class="node"><span class="code">PER</span><span class="place">Perth / Margaret River</span></div>
         <div class="seg"><svg><use href="#i-plane" /></svg>~3h</div>
         <div class="node"><span class="code">ADL</span><span class="place">Adelaide</span></div>
-        <div class="seg road"><svg><use href="#i-car" /></svg>4 days</div>
+        <div class="seg"><svg><use href="#i-plane" /></svg>~1.5h</div>
         <div class="node"><span class="code">MEL</span><span class="place">Mornington</span></div>
         <div class="seg"><svg><use href="#i-plane" /></svg>~1.5h</div>
         <div class="node"><span class="code">SYD</span><span class="place">Freshwater</span></div>
@@ -1091,8 +1096,8 @@
       </div>
     </div>
     <p style="color:var(--ink-soft);font-size:.85rem;margin-top:.9rem">
-      Adelaide to Mornington is now a self-drive via Robe, Port Fairy and the Great Ocean Road, keeping the
-      hire car all the way to Mornington. The Adelaide&ndash;Melbourne flight is the backup.
+      Adelaide to Melbourne is a flight. The 1,000 km coastal drive via Port Fairy and the Great Ocean Road
+      was ruled out as too much driving &mdash; it's kept under Leg 3 for reference.
     </p>
   </section>
 
@@ -1103,15 +1108,14 @@
       <div>
         <p>
           Departure is <strong>Friday 19 March 2027</strong>, with the flight out able to slide up to 5 days
-          later and the flight home (14 April) able to slide up to 5 days later. Easter lands on the road trip:
-          <strong>Good Friday 26 Mar</strong> in Margaret River, <strong>Easter Sunday 28 Mar</strong> on the first
-          day's drive, <strong>Easter Monday 29 Mar</strong> on the way to Port Fairy &mdash; so book Robe and Port
-          Fairy early.
+          later and the flight home (14 April) able to slide up to 5 days later. Easter falls across the middle:
+          <strong>Good Friday 26 Mar</strong> in Margaret River, then <strong>Easter Sunday 28 Mar</strong> and
+          <strong>Easter Monday 29 Mar</strong> in Adelaide &mdash; so book there early and expect some closures.
         </p>
         <p>
           Late March in the <strong>South West of WA</strong> is late-summer/early-autumn &mdash; warm
           days, water still swimmable at Yallingup, caves and forests at their best.
-          The Great Ocean Road and Mornington Peninsula are cooling into autumn &mdash; bring layers and a rain
+          Adelaide is still warm, but the Mornington Peninsula is cooling into autumn &mdash; bring layers and a rain
           jacket for the coast. Sydney in the first half of April is mild and settled, the best stretch of the
           year for the Northern Beaches ocean pools.
         </p>
@@ -1186,30 +1190,27 @@
 
       <article class="leg">
         <div class="leg__stub">
-          <div class="leg__label">Leg 3 &middot; road trip</div>
-          <div class="leg__name">Adelaide to Mornington, by car</div>
+          <div class="leg__label">Leg 3</div>
+          <div class="leg__name">Adelaide</div>
           <div class="leg__meta">
-            <span class="dates">Sat 27 &ndash; Wed 31 Mar</span>
-            <span class="nights">4 nights on the way</span>
+            <span class="dates">Sat 27 &ndash; Tue 30 Mar</span>
+            <span class="nights">3 nights &middot; nothing planned yet</span>
           </div>
-          <div class="leg__hop"><svg><use href="#i-plane" /></svg> PER &rarr; ADL, ~3h, then the hire car</div>
-          <div class="leg__stay"><b>Stay</b> Not booked &mdash; Adelaide, Robe, Port Fairy, Apollo Bay (draft)</div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> PER &rarr; ADL, ~3h</div>
+          <div class="leg__stay"><b>Stay</b> Not booked &mdash; Easter weekend, so book early</div>
         </div>
         <div class="leg__body">
-          <p class="leg__focus">Fly to Adelaide, pick up a one-way hire car and keep it all the way to Mornington &mdash; the south-east coast and the Great Ocean Road at your own pace.</p>
+          <p class="leg__focus">A pause between Perth and Mornington, with a flight on to Melbourne on the 30th. The three nights are open &mdash; here are some ideas, none booked.</p>
           <ul class="leg__list">
-            <li><strong>Sat 27 Mar</strong> &mdash; fly Perth &rarr; Adelaide, collect the car, night in Adelaide</li>
-            <li><strong>Sun 28 Mar (Easter Sunday)</strong> &mdash; down the Limestone Coast to Robe</li>
-            <li><strong>Mon 29 Mar (Easter Monday)</strong> &mdash; Mount Gambier, Portland, then your favourite town, Port Fairy, for the night</li>
-            <li><strong>Tue 30 Mar</strong> &mdash; Warrnambool, the Twelve Apostles, on to Apollo Bay</li>
-            <li><strong>Wed 31 Mar</strong> &mdash; Lorne and Bells Beach, Queenscliff, then the car ferry to Sorrento and about an hour along the beach road to Mornington</li>
-            <li>Wild koalas are usually easy to find around Kennett River, between Apollo Bay and Lorne</li>
+            <li>Glenelg beach, a tram ride from the city</li>
+            <li>Port Noarlunga reef &mdash; snorkelling just south of Adelaide</li>
+            <li>Cleland Wildlife Park in the Adelaide Hills &mdash; a walk-through park with kangaroos and koalas (captive)</li>
+            <li>A Kangaroo Island trip for wild koalas and sea lions &mdash; the biggest commitment, so only if you want a full day or two</li>
           </ul>
-          <p style="margin:.7rem 0 0;font-size:.82rem;color:var(--ink-soft)">The pacing is a first draft &mdash; swap the nights around as you like. Check the <a href="https://searoad.com.au/">Queenscliff&ndash;Sorrento ferry</a> timetable before fixing the last day.</p>
+          <p style="margin:.7rem 0 0;font-size:.82rem;color:var(--ink-soft)"><strong>Easter Sunday (28 Mar) and Easter Monday (29 Mar) fall here</strong> &mdash; some shops and attractions close.</p>
           <div class="tags">
-            <span class="tag">Road trip</span>
-            <span class="tag" data-k="hike">Coastal walks</span>
-            <span class="tag" data-k="wild">Koalas</span>
+            <span class="tag" data-k="wild">Wildlife ideas</span>
+            <span class="tag">Open question</span>
           </div>
         </div>
       </article>
@@ -1217,30 +1218,41 @@
       <div class="transport-choice">
         <div class="transport-opt is-default">
           <span class="badge">The plan</span>
-          <h4>Drive Adelaide &rarr; Mornington</h4>
-          <p>Hire in Adelaide on 27 Mar, return at Melbourne airport on 3 Apr (one-way fee, not priced yet). Saves the Adelaide&ndash;Melbourne flight (&euro;308) and gives you a car at Mornington for Wilsons Promontory, Phillip Island and Melbourne.</p>
-          <a class="linkout" href="https://www.google.com/maps/dir/Adelaide+SA/Robe+SA/Port+Fairy+VIC/Apollo+Bay+VIC/Queenscliff+VIC/Sorrento+VIC/Mornington+VIC/">Map the route &rarr;</a>
-          &nbsp;&middot;&nbsp;
-          <a class="linkout" href="https://roadgenius.com/en-gb/cars/rental/australia/adelaide-to-melbourne/">Compare one-way hire &rarr;</a>
-        </div>
-        <div class="transport-opt is-alt">
-          <span class="badge">Backup</span>
           <h4>Fly Adelaide &rarr; Melbourne</h4>
-          <p>~1h20 nonstop, &euro;308 for four. Use it if the weather or the school calendar squeezes the drive.</p>
+          <p>~1h20 nonstop on Tue 30 Mar, &euro;308 for four, with several flights a day. Then about 1h15 to Mornington &mdash; Mari &amp; Ron, a transfer or a hire car.</p>
           <a class="linkout" href="https://www.google.com/travel/flights?q=Flights%20from%20ADL%20to%20MEL%20on%202027-03-30%20one%20way%20for%204%20people">Check fares &rarr;</a>
         </div>
+        <div class="transport-opt is-alt">
+          <span class="badge">Discarded</span>
+          <h4>Drive Adelaide &rarr; Mornington</h4>
+          <p>About 1,000 km via Robe, Port Fairy and the Great Ocean Road &mdash; too much driving. The draft plan is kept below for reference.</p>
+          <a class="linkout" href="https://www.google.com/maps/dir/Adelaide+SA/Robe+SA/Port+Fairy+VIC/Apollo+Bay+VIC/Queenscliff+VIC/Sorrento+VIC/Mornington+VIC/">Map the route &rarr;</a>
+        </div>
       </div>
+
+      <details class="discarded">
+        <summary>Discarded: the coastal drive, draft pacing (kept for reference)</summary>
+        <ul>
+          <li><strong>Sat 27 Mar</strong> &mdash; fly Perth &rarr; Adelaide, collect a one-way hire car, night in Adelaide</li>
+          <li><strong>Sun 28 Mar (Easter Sunday)</strong> &mdash; down the Limestone Coast to Robe</li>
+          <li><strong>Mon 29 Mar (Easter Monday)</strong> &mdash; Mount Gambier, Portland, then Port Fairy for the night</li>
+          <li><strong>Tue 30 Mar</strong> &mdash; Warrnambool, the Twelve Apostles, on to Apollo Bay</li>
+          <li><strong>Wed 31 Mar</strong> &mdash; Lorne and Bells Beach, Queenscliff, the car ferry to Sorrento, then the beach road to Mornington</li>
+          <li>Wild koalas are usually easy to find around Kennett River, between Apollo Bay and Lorne</li>
+        </ul>
+        <p>That version would have left 3 nights at Mornington and kept the car there. Handy links: <a href="https://searoad.com.au/">Queenscliff&ndash;Sorrento ferry</a> &middot; <a href="https://roadgenius.com/en-gb/cars/rental/australia/adelaide-to-melbourne/">compare one-way hire</a>.</p>
+      </details>
 
       <article class="leg">
         <div class="leg__stub">
           <div class="leg__label">Leg 4</div>
           <div class="leg__name">Mornington Peninsula</div>
           <div class="leg__meta">
-            <span class="dates">Wed 31 Mar &ndash; Sat 3 Apr</span>
-            <span class="nights">3 nights</span>
+            <span class="dates">Tue 30 Mar &ndash; Sat 3 Apr</span>
+            <span class="nights">4 nights</span>
           </div>
-          <div class="leg__hop"><svg><use href="#i-car" /></svg> Sorrento &rarr; Mornington, ~1h by the beach road</div>
-          <div class="leg__stay"><b>Stay</b> With Mari &amp; Ron &mdash; beach hut, ocean toys. You have the car.</div>
+          <div class="leg__hop"><svg><use href="#i-plane" /></svg> ADL &rarr; MEL, ~1h20, then ~1h15 to Mornington</div>
+          <div class="leg__stay"><b>Stay</b> With Mari &amp; Ron &mdash; beach hut, ocean toys</div>
         </div>
         <div class="leg__body">
           <p class="leg__focus">The slow, restorative stretch of the trip &mdash; hot springs, a sculpture garden and Mari &amp; Ron's beach hut, with a lot within easy reach.</p>
@@ -1249,8 +1261,8 @@
             <li><a href="https://www.portphillipestate.com.au/">Port Phillip Estate</a> &mdash; the sculpture garden, free live music on weekends</li>
             <li><a href="https://www.peninsulahotsprings.com/">Peninsula Hot Springs</a> &mdash; the geothermal mineral pools</li>
             <li>Ocean-toy days at Mari &amp; Ron's beach hut</li>
-            <li>An easy drive from here: Melbourne, Wilsons Promontory, Phillip Island</li>
-            <li>Sat 3 Apr: return the car at Melbourne airport (~1h15 from Mornington), fly to Sydney</li>
+            <li>Within reach with a borrowed car or a day's hire: Melbourne, Wilsons Promontory, Phillip Island</li>
+            <li>Sat 3 Apr: fly Melbourne &rarr; Sydney (the airport is ~1h15 from Mornington)</li>
           </ul>
           <div class="tags">
             <span class="tag">Friends &mdash; Mari &amp; Ron</span>
@@ -1345,7 +1357,7 @@
       <div class="card">
         <h3>Wildlife along the way</h3>
         <p class="sub">Real chances at most stops</p>
-        <p>Kangaroos in the Boranup karri forest near Margaret River; quokkas if Rottnest fits in; Caversham Wildlife Park in Perth for hand-feeding kangaroos and meeting koalas and wombats (captive, not wild); wild koalas around Kennett River on the Great Ocean Road; kangaroos at dawn in Greens Bush and seadragons/seals on a Mornington kayak; harmless Port Jackson sharks and blue gropers snorkelling Shelly Beach; a little-penguin colony at Manly.</p>
+        <p>Kangaroos in the Boranup karri forest near Margaret River; quokkas if Rottnest fits in; Caversham Wildlife Park in Perth for hand-feeding kangaroos and meeting koalas and wombats (captive, not wild); Cleland Wildlife Park in the Adelaide Hills or a Kangaroo Island trip if you plan one in Adelaide; kangaroos at dawn in Greens Bush and seadragons/seals on a Mornington kayak; harmless Port Jackson sharks and blue gropers snorkelling Shelly Beach; a little-penguin colony at Manly.</p>
       </div>
       <div class="card">
         <h3>Concert &mdash; Rufus Wainwright</h3>
@@ -1364,8 +1376,8 @@
         <tbody>
           <tr><td>Singapore</td><td>Clarke Quay, Novena or a HomeExchange</td><td class="num">3</td><td>Hotels priced for 20&ndash;23 Mar: Holiday Inn Express Clarke Quay ~&euro;191/night, Holiday Inn Express &amp; Suites Novena ~&euro;137/night with free breakfast. HomeExchange is thin &mdash; see below.</td></tr>
           <tr><td>Perth / Margaret River</td><td>Yallingup / Margaret River area</td><td class="num">~4</td><td class="tbc">Rental car; a night with Cindy possible; rest via HomeExchange or hotel, TBD</td></tr>
-          <tr><td>Road trip</td><td>Adelaide, Robe, Port Fairy, Apollo Bay</td><td class="num">4</td><td class="tbc">Not booked &mdash; Easter weekend, so book early. Self-catering helps with the allergy.</td></tr>
-          <tr><td>Mornington</td><td>Mornington Peninsula</td><td class="num">3</td><td>With Mari &amp; Ron</td></tr>
+          <tr><td>Adelaide</td><td>City or Glenelg</td><td class="num">3</td><td class="tbc">Not booked &mdash; Easter weekend, so book early. Self-catering helps with the allergy.</td></tr>
+          <tr><td>Mornington</td><td>Mornington Peninsula</td><td class="num">4</td><td>With Mari &amp; Ron</td></tr>
           <tr><td>Sydney</td><td>Freshwater, Northern Beaches</td><td class="num">11</td><td>With Claire, Ross and Lulu</td></tr>
         </tbody>
       </table>
@@ -1387,7 +1399,7 @@
 
   <section>
     <div class="section-head"><span class="num">06</span><h2>Best flights to check</h2></div>
-    <p class="linkbox-note">Live Google Flights searches, one leg at a time, one-way for 4 people. The Adelaide&ndash;Melbourne flight is only the backup now &mdash; the plan is to drive.</p>
+    <p class="linkbox-note">Live Google Flights searches, one leg at a time, one-way for 4 people.</p>
     <div class="table-wrap">
       <table>
         <caption>Each leg, DUB to SYD and home</caption>
@@ -1396,9 +1408,9 @@
           <tr><td>1</td><td>DUB &rarr; SIN</td><td>19 Mar 2027 (up to 5 days later)</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20DUB%20to%20SIN%20on%202027-03-19%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
           <tr><td>2</td><td>SIN &rarr; PER</td><td>23 Mar 2027</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20SIN%20to%20PER%20on%202027-03-23%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
           <tr><td>3</td><td>PER &rarr; ADL</td><td>27 Mar 2027</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20PER%20to%20ADL%20on%202027-03-27%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
-          <tr><td>3 backup</td><td>ADL &rarr; MEL <span class="tbc">(only if not driving)</span></td><td>30 Mar 2027</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20ADL%20to%20MEL%20on%202027-03-30%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
-          <tr><td>4</td><td>MEL &rarr; SYD</td><td>3 Apr 2027</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20MEL%20to%20SYD%20on%202027-04-03%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
-          <tr><td>5</td><td>SYD &rarr; DUB</td><td>14 Apr 2027 (up to 5 days later)</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20SYD%20to%20DUB%20on%202027-04-14%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
+          <tr><td>4</td><td>ADL &rarr; MEL</td><td>30 Mar 2027</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20ADL%20to%20MEL%20on%202027-03-30%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
+          <tr><td>5</td><td>MEL &rarr; SYD</td><td>3 Apr 2027</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20MEL%20to%20SYD%20on%202027-04-03%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
+          <tr><td>6</td><td>SYD &rarr; DUB</td><td>14 Apr 2027 (up to 5 days later)</td><td class="linkcell"><a href="https://www.google.com/travel/flights?q=Flights%20from%20SYD%20to%20DUB%20on%202027-04-14%20one%20way%20for%204%20people">Google Flights &rarr;</a></td></tr>
         </tbody>
       </table>
     </div>
@@ -1419,13 +1431,13 @@
         <caption>Flights, whole trip, 4 adults, fewest stops, cheapest listed fares on Google Flights 10 Oct 2026. Not a quote &mdash; fares move daily.</caption>
         <thead><tr><th>Scenario</th><th>Out (DUB&rarr;SIN)</th><th>Home (SYD&rarr;DUB)</th><th>Total</th></tr></thead>
         <tbody>
-          <tr><td>Keep 19 Mar out, cheapest home</td><td>19 Mar &middot; Turkish via Istanbul, 1 stop, 17h &euro;2,357 (leaves 4:35pm, lands 5:40pm next day)</td><td>14 Apr &middot; Qatar via Doha, 1 stop &euro;2,822</td><td class="num"><strong>&euro;6,528</strong></td></tr>
-          <tr><td>Leave ~4 days later, cheapest home</td><td>23 Mar &middot; Lufthansa group, 1 stop, 6:05pm &rarr; 6:40pm next day &euro;1,778</td><td>~18 Apr &middot; Qatar via Doha &euro;2,822</td><td class="num">&euro;5,949</td></tr>
-          <tr><td>Keep 19 Mar out, home on Emirates (one free change)</td><td>19 Mar &middot; Turkish via Istanbul &euro;2,357</td><td>14 Apr &middot; Emirates/Qantas via Dubai &euro;3,774</td><td class="num">&euro;7,480</td></tr>
+          <tr><td>Keep 19 Mar out, cheapest home</td><td>19 Mar &middot; Turkish via Istanbul, 1 stop, 17h &euro;2,357 (leaves 4:35pm, lands 5:40pm next day)</td><td>14 Apr &middot; Qatar via Doha, 1 stop &euro;2,822</td><td class="num"><strong>&euro;6,836</strong></td></tr>
+          <tr><td>Leave ~4 days later, cheapest home</td><td>23 Mar &middot; Lufthansa group, 1 stop, 6:05pm &rarr; 6:40pm next day &euro;1,778</td><td>~18 Apr &middot; Qatar via Doha &euro;2,822</td><td class="num">&euro;6,257</td></tr>
+          <tr><td>Keep 19 Mar out, home on Emirates (one free change)</td><td>19 Mar &middot; Turkish via Istanbul &euro;2,357</td><td>14 Apr &middot; Emirates/Qantas via Dubai &euro;3,774</td><td class="num">&euro;7,788</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="linkbox-note">Each total includes the Australian hops that remain: Singapore&rarr;Perth &euro;532, Perth&rarr;Adelaide &euro;514 and Melbourne&rarr;Sydney &euro;303 (&euro;1,349). Driving Adelaide to Mornington drops the &euro;308 Adelaide&ndash;Melbourne flight, but adds one-way car hire, fuel and four nights' accommodation, none of which is priced yet. Leaving 4 days later saves about &euro;580 on the outbound, but every date after it moves with it &mdash; the Singapore, Margaret River and road-trip dates all shift.</p>
+    <p class="linkbox-note">Each total includes the four Australian and regional hops: Singapore&rarr;Perth &euro;532, Perth&rarr;Adelaide &euro;514, Adelaide&rarr;Melbourne &euro;308 and Melbourne&rarr;Sydney &euro;303 (&euro;1,657). Skipping Adelaide and flying Perth&rarr;Melbourne direct (&euro;530) would save about &euro;290 and 3 nights. Leaving 4 days later saves about &euro;580 on the outbound, but every date after it moves with it &mdash; the Singapore, Margaret River and Adelaide dates all shift.</p>
     <p class="linkbox-note">The outbound is not a Gulf problem: the Turkish and Lufthansa-group flights above are 1-stop through Europe/Turkey and cost about the same as the Gulf options. The Gulf only comes in on the way home &mdash; Sydney to Dublin has no 1-stop alternative; Gulf-free routings need two stops and cost &euro;3,400 or more.</p>
     <p class="linkbox-note"><strong>Jet lag:</strong> the outbound options leave Dublin late afternoon or evening and land in Singapore around 4&ndash;7pm the next day, so you sleep on the plane and arrive in time to stay up until bedtime. Perth is the same time zone as Singapore. Melbourne and Sydney are 3 hours ahead of Perth. Going home is westbound and kinder; the Qatar flights leave Sydney mid-afternoon or at 8:55pm and fly through the night.</p>
 
@@ -1447,8 +1459,7 @@
         <thead><tr><th>Item</th><th>Who</th><th>Cost</th></tr></thead>
         <tbody>
           <tr><td>Singapore, 3 nights (hotel)</td><td>Family</td><td class="num">~&euro;411 (Novena) to ~&euro;573 (Clarke Quay) per room &mdash; check it fits four</td></tr>
-          <tr><td>One-way car hire, Adelaide &rarr; Melbourne airport, 27 Mar&ndash;3 Apr</td><td>Family</td><td class="num tbc">TBC &mdash; plus fuel (~1,100 km)</td></tr>
-          <tr><td>Road-trip nights (Adelaide, Robe, Port Fairy, Apollo Bay)</td><td>Family</td><td class="num tbc">TBC</td></tr>
+          <tr><td>Adelaide, 3 nights</td><td>Family</td><td class="num tbc">TBC</td></tr>
           <tr><td>Wakeboard session, Singapore</td><td>Family</td><td class="num tbc">TBC &mdash; operator not chosen</td></tr>
           <tr><td>Caversham Wildlife Park entry</td><td>Family</td><td class="num tbc">TBC &mdash; shows and animal food are included</td></tr>
           <tr><td>Rental car, Perth region, ~4 days</td><td>&mdash;</td><td class="num tbc">TBC</td></tr>
@@ -1467,9 +1478,9 @@
       <li><span class="box"></span><div><span class="who">Flights</span>Ask Trailfinders to price the 1-stop outbound (Turkish / Lufthansa group) and a 1-stop home via Qatar, Emirates and Etihad &mdash; each with the changeable and refundable fare options and the fee to change.</div></li>
       <li><span class="box"></span><div><span class="who">Cover</span>Ask Trailfinders for their policy wording on a relative's pre-existing condition and on known events, and whether a "cancel for any reason" option exists.</div></li>
       <li><span class="box"></span><div><span class="who">Singapore</span>Decide HomeExchange (thin) vs hotel &mdash; Novena ~&euro;137/night, Clarke Quay ~&euro;191/night.</div></li>
-      <li><span class="box"></span><div><span class="who">Road trip</span>Price one-way hire from Adelaide to Melbourne airport; book Robe, Port Fairy and Apollo Bay for Easter weekend; check the Queenscliff&ndash;Sorrento ferry timetable.</div></li>
+      <li><span class="box"></span><div><span class="who">Adelaide</span>Decide what the 3 nights are for (or shorten them), then book a stay for Easter weekend.</div></li>
       <li><span class="box"></span><div><span class="who">Margaret River</span>Confirm dates with Cindy; decide Yallingup/Margaret River accommodation (HomeExchange vs hotel); check whether Rottnest fits; decide when to fit Caversham (Tue 23 on arrival, Sat 27 before the Adelaide flight, or an extra Perth night).</div></li>
-      <li><span class="box"></span><div><span class="who">Mornington</span>Confirm 31 Mar&ndash;3 Apr with Mari &amp; Ron.</div></li>
+      <li><span class="box"></span><div><span class="who">Mornington</span>Confirm 30 Mar&ndash;3 Apr with Mari &amp; Ron, and how you'll get from Melbourne airport to Mornington.</div></li>
       <li><span class="box"></span><div><span class="who">Concert</span>Pick a Rufus Wainwright show (7/8 or 10/11 Apr) and book before seats go.</div></li>
       <li><span class="box"></span><div><span class="who">Sydney</span>Sort day trips with Claire, Ross and Lulu (Bowral, Ku-ring-gai Chase, Palm Beach ferry, Jervis Bay / Kiama); register for Curl Curl parkrun (barcode) and Run2Cure.</div></li>
       <li><span class="box"></span><div><span class="who">Allergy</span>Pre-flag on every booking; call ahead to the Margaret River Chocolate Factory and any café or lunch stop.</div></li>
@@ -1483,7 +1494,7 @@
       <li><strong>Outbound date</strong> &mdash; keep 19 March, or leave ~4 days later and save about &euro;580? Later moves every date after it.</li>
       <li><strong>Flight home</strong> &mdash; Qatar (cheapest 1-stop, no special flexibility), Emirates (about &euro;950 more, one free change), or a Gulf-free routing with two stops (&euro;3,400+)?</li>
       <li><strong>Singapore</strong> &mdash; HomeExchange (few homes, long minimum stays) or a hotel at ~&euro;137&ndash;191 a night?</li>
-      <li><strong>The drive</strong> &mdash; pick-up and drop-off points, and who's driving. Hire price still to find.</li>
+      <li><strong>Adelaide</strong> &mdash; three nights with nothing planned: keep them, shorten them for more days at Mornington, or skip Adelaide and fly Perth&rarr;Melbourne direct (saves about &euro;290)?</li>
       <li><strong>Concert night</strong> &mdash; 7/8 or 10/11 April, and which Rufus Wainwright show?</li>
       <li><strong>Rottnest</strong> &mdash; fit it into the Perth/Margaret River week, or drop it this time?</li>
       <li><strong>Caversham Wildlife Park</strong> &mdash; Tue 23 on arrival, Sat 27 before the Adelaide flight, or an extra night in Perth?</li>
