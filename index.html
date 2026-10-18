@@ -522,6 +522,11 @@
   .micromap text { font-size: 10.5px; fill: var(--ink); }
   .micromap text.sub { font-size: 9px; fill: var(--ink-soft); }
   .micromap text.title { font-size: 9px; letter-spacing: .06em; fill: var(--ink-soft); text-transform: uppercase; }
+  .more { border: 1px solid var(--line); border-radius: 12px; padding: .7rem 1rem; background: var(--surface-sunk); margin: .9rem 0 0; }
+  .more summary { cursor: pointer; font-family: "IBM Plex Mono", Menlo, monospace; font-size: .76rem; letter-spacing: .04em; color: var(--teal-deep); }
+  .more .table-wrap { margin: .8rem 0 0; background: var(--surface); }
+  .more p { margin: .7rem 0 0; font-size: .85rem; color: var(--ink-soft); }
+  .more .linkbox-note { margin: .7rem 0 0; }
   .discarded { border: 1px dashed var(--line); border-radius: 12px; padding: .8rem 1.1rem; background: var(--surface-sunk); margin: 0 0 1.1rem; }
   .discarded summary { cursor: pointer; font-family: "IBM Plex Mono", Menlo, monospace; font-size: .76rem; letter-spacing: .04em; color: var(--ink-soft); }
   .discarded ul { margin: .8rem 0 0; padding-left: 1.1rem; color: var(--ink-soft); }
@@ -1187,27 +1192,64 @@
           <div class="leg__stay"><b>Stay</b> Perth / Fremantle 2 nights (Tue 23, Wed 24), then Yallingup / Margaret River 3 (Thu 25&ndash;Sat 27); hire car for the whole stay, Tue 23&ndash;Sun 28</div>
         </div>
         <div class="leg__body">
-          <p class="leg__focus">Perth and Rottnest first, with Caversham back in, then three nights on the Margaret River coast. Wine only if the mood takes you.</p>
+          <p class="leg__focus">Perth and Rottnest first, with Caversham back in, then three nights on the Margaret River coast.</p>
           <ul class="leg__list">
             <li><strong>Tue 23 &ndash; Thu 25 morning, the Perth end</strong></li>
             <li>Tue 23 &mdash; land at 4:35pm, pick up the hire car at the airport and drive to Fremantle (check the place has parking)</li>
-            <li>Wed 24 &mdash; <a href="https://www.rottnestisland.com/visit/guides-tips/set-sail-with-rottnest-island-s-ultimate-water-adventures">Rottnest Island</a> for the day, by ferry from Fremantle. The cheap version is just as good: hire bikes and snorkel the free marked trails at Little Salmon Bay and Parker Point with your own masks, add the easy 4 km Rotto Mini Loop, and quokkas everywhere. Paid extras if you want them: a guided snorkel boat (about A$117 an adult in one listing), or the <a href="https://www.rottnestisland.com/see-do/beaches-water-activities/charter-1">Capella catamaran</a> (about A$185 an adult, A$145 a child, roughly 3 hours, leaves the island at 12:30pm on a Wednesday, snorkel gear, kayaks and a paddleboard on board). Prices are in the Budget section. Check ferry ports and times</li>
+            <li>Wed 24 &mdash; <a href="https://www.rottnestisland.com/visit/guides-tips/set-sail-with-rottnest-island-s-ultimate-water-adventures">Rottnest Island</a> for the day, by ferry from Fremantle. The cheap version is just as good: hire bikes and snorkel the free marked trails at Little Salmon Bay and Parker Point with your own masks, add the easy 4 km Rotto Mini Loop, and quokkas everywhere. Paid extras if you want them: a guided snorkel boat (about A$117 an adult in one listing), or the <a href="https://www.rottnestisland.com/see-do/beaches-water-activities/charter-1">Capella catamaran</a> (about A$185 an adult, A$145 a child, roughly 3 hours, leaves the island at 12:30pm on a Wednesday, snorkel gear, kayaks and a paddleboard on board). Options and costs are in the expandable under this leg. Check ferry ports and times</li>
             <li>Thu 25 morning &mdash; <a href="https://cavershamwildlife.com.au/">Caversham Wildlife Park</a>, Whiteman Park in north-east Perth: a top pick for the 12-year-old, with hand-feeding kangaroos, koalas and wombats (captive, not wild). Open 9:30&ndash;4, last entry 3pm, about 3 hours. Then drive south in the hire car (~3h to Yallingup) for the afternoon</li>
             <li>Perth city itself: skip the centre. <a href="https://www.bgpa.wa.gov.au/kings-park">Kings Park</a> (free bushland, river views and a treetop walkway, close to the centre and to Nedlands) is the one place worth an hour, on Tuesday evening or the Sunday if there is time. Fremantle is the better harbour-town fix</li>
             <li><strong>Thu 25 &ndash; Sat 27, the Margaret River end</strong></li>
             <li>Thu 25 evening and Fri 26 &mdash; Yallingup beaches, surf and the sea pools</li>
-            <li>Surf hire: boards and wetsuits at Yallingup or Prevelly &mdash; the shortlist is in the Runs &amp; wildlife section</li>
-            <li>Fri 26 &mdash; Margaret River town and the Margaret River Chocolate Factory, Vasse Virgin (the lavender-farm avenue and handmade goods), one cave (Mammoth, Lake or Ngilgi)</li>
-            <li>Sat 27 &mdash; walks rather than wine: sections of the Cape to Cape Track, the Boranup karri forest, Cape Leeuwin lighthouse</li>
-            <li>Cellar doors are a maybe, not a plan &mdash; the shortlist is in the Runs &amp; wildlife section if you fancy one</li>
+            <li>Surf hire: boards and wetsuits at Yallingup or Prevelly &mdash; the shortlist is in the expandable under this leg</li>
+            <li>Fri 26 &mdash; Margaret River town and the Margaret River Chocolate Factory (call ahead about nuts), one cave (Mammoth, Lake or Ngilgi)</li>
+            <li>Sat 27 &mdash; walks: sections of the Cape to Cape Track, the Boranup karri forest, Cape Leeuwin lighthouse</li>
             <li>Maybe a day with Cindy and co in Nedlands before flying on. Sunday is tight (about 3h up from Margaret River, flight at 2:35pm), so see the open questions for the ways to fit it</li>
             <li><strong>Sun 28 (Easter Sunday)</strong> &mdash; Busselton Jetty on the drive back up to Perth, drop the car at the airport, then the 2:35pm Jetstar flight to Melbourne (lands 9:10pm)</li>
           </ul>
           <p style="margin:.7rem 0 0;font-size:.82rem;color:var(--ink-soft)"><strong>Fri 26 Mar is Good Friday</strong> (public holiday) &mdash; book the caves and the chocolate factory ahead.</p>
+          <details class="more">
+            <summary>Rottnest day: options and costs</summary>
+    <div class="table-wrap">
+      <table>
+        <caption>Rottnest day, Wed 24 Mar, four of you. Prices from 2025&ndash;26 listings in A$, converted at about 0.6, so indicative only and likely a little higher in 2027</caption>
+        <thead><tr><th>Way to do it</th><th>What's in it</th><th>About</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Do it yourself</strong></td><td>Ferry from Fremantle, bikes (about A$35 an adult, A$18 a child), your own masks and snorkels, the free trails at Little Salmon Bay and Parker Point</td><td class="num"><strong>&euro;205</strong></td></tr>
+          <tr><td>Do it yourself, snorkel sets hired</td><td>As above, plus 4 sets at about A$20 a day (<a href="https://www.rottnestfastferries.com.au/bike-snorkel-hire/">bike and snorkel hire</a>)</td><td class="num">&euro;255</td></tr>
+          <tr><td>Guided snorkel boat</td><td>Ferry, plus a 3-hour boat trip to sheltered spots with gear and wetsuits included, about A$117 an adult (child price not found; priced here as four adults)</td><td class="num">&euro;420</td></tr>
+          <tr><td>Capella catamaran</td><td>Ferry, plus 3 adults at A$185 and 1 child at A$145 (Alice, 12, is in the child age band; Elliot, 16, is not)</td><td class="num">&euro;560</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="linkbox-note">The ferry is the part you can't avoid: about A$220&ndash;240 for a same-day family return including the island admission fee, if Elliot counts as a child (<a href="https://rottnestexpress.com.au/ferry-bookings/fares/">Rottnest Express</a>, <a href="https://www.sealink.com.au/rottnest-island/ferry-information/ferry-fares/">SeaLink</a>), or about &euro;140. The Capella is a lovely day but it costs about &euro;355 more than doing it yourself, and the free snorkel trails are good reef. It is also only running from 7 Nov 2026 to April, and the departure times can change with weather and numbers.</p>
+
+          </details>
+          <details class="more">
+            <summary>Optional: FliteScooter (eFoil) in East Fremantle</summary>
+        <p>Morgan and Elliot: a 1-hour beginner session on a FliteScooter (an electric hydrofoil) on the Swan River at East Fremantle, with Aqua Flights. About &euro;100 a person, so &euro;200 for the two of you. Mornings only, and the locations include Swan Yacht Club. <a href="https://alohafun.com/activity/new-to-efoiling-flitescooter-east-fremantle/">Booking page and availability</a>.</p>
+        <p>Where it fits: Tuesday you land at 4:35pm and Wednesday is Rottnest, so the only free morning is Thursday 25, which is also Caversham's. Options are an early session from the Fremantle base, then Caversham from about 10am and away by about 1pm for the 3-hour drive south, or choosing one of the two. Check the age and weight limits, and the weather policy, before booking.</p>
+          </details>
+          <details class="more">
+            <summary>Surf hire: Yallingup and Margaret River</summary>
+    <div class="table-wrap">
+      <table>
+        <caption>Surf hire &mdash; Yallingup and Margaret River. Prices not found, so TBC</caption>
+        <thead><tr><th>Who</th><th>Where</th><th>What they hire</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://www.margaretriver.com/?p=1850972">Yallingup Surf School</a></td><td>Yallingup</td><td>Soft learner boards and wetsuits, hire of beach and water gear, lessons for all ages; transport on request</td></tr>
+          <tr><td><a href="https://mrsurf.rezdy.com/746305/half-day-surfboard-hire-margaret-river-surfing-academy">Margaret River Surfing Academy</a></td><td>Rivermouth car park, Prevelly</td><td>Mini-mals, funboards and shortboards, plus <a href="https://mrsurf.rezdy.com/726899/wetsuit-hire">wetsuits</a>; by the hour, half day, full day or several days</td></tr>
+          <tr><td><a href="https://www.westernaustralia.com/au/hire/margaret-river-surf-school-hire/65f14f32147bb5a30b91a668">Margaret River Surf School</a></td><td>Mobile van and home base</td><td>Soft and hard boards, wetsuits for kids and adults; a discount for hire over 24 hours</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+          </details>
           <div class="tags">
             <span class="tag" data-k="water">Rottnest: snorkel, sail, cycle</span>
             <span class="tag" data-k="wild">Quokkas &amp; wildlife park</span>
             <span class="tag" data-k="surf">Surf &amp; beaches</span>
+            <span class="tag" data-k="water">eFoil, optional</span>
             <span class="tag" data-k="hike">Caves &amp; walks</span>
             <span class="tag">Friends &mdash; Cindy &amp; co, Nedlands</span>
             <span class="tag">Hire car</span>
@@ -1405,32 +1447,6 @@
   <section>
     <div class="section-head"><span class="num">04</span><h2>Runs &amp; wildlife</h2></div>
 
-    <div class="table-wrap" style="margin-bottom:1.2rem">
-      <table>
-        <caption>Margaret River cellar doors &mdash; only a maybe, if the mood takes you</caption>
-        <thead><tr><th>Stop</th><th>Known for</th></tr></thead>
-        <tbody>
-          <tr><td><a href="https://www.vassefelix.com.au/">Vasse Felix</a></td><td>One of the region's founding wineries; restaurant + gallery</td></tr>
-          <tr><td><a href="https://www.howardparkwines.com.au/">Howard Park</a></td><td>Cellar door and terrace views over the vines</td></tr>
-          <tr><td><a href="https://www.voyagerestate.com.au/">Voyager Estate</a></td><td>Cape Dutch / South African-style buildings and rose gardens</td></tr>
-          <tr><td><a href="https://www.vassevirgin.com.au/">Vasse Virgin</a></td><td>Lavender farm, handmade soaps and oils, the avenue</td></tr>
-          <tr><td>Margaret River Chocolate Factory</td><td>Tastings and a shop on the high street &mdash; call ahead re: nuts (see protocol below)</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="table-wrap" style="margin-bottom:1.2rem">
-      <table>
-        <caption>Surf hire &mdash; Yallingup and Margaret River. Prices not found, so TBC</caption>
-        <thead><tr><th>Who</th><th>Where</th><th>What they hire</th></tr></thead>
-        <tbody>
-          <tr><td><a href="https://www.margaretriver.com/?p=1850972">Yallingup Surf School</a></td><td>Yallingup</td><td>Soft learner boards and wetsuits, hire of beach and water gear, lessons for all ages; transport on request</td></tr>
-          <tr><td><a href="https://mrsurf.rezdy.com/746305/half-day-surfboard-hire-margaret-river-surfing-academy">Margaret River Surfing Academy</a></td><td>Rivermouth car park, Prevelly</td><td>Mini-mals, funboards and shortboards, plus <a href="https://mrsurf.rezdy.com/726899/wetsuit-hire">wetsuits</a>; by the hour, half day, full day or several days</td></tr>
-          <tr><td><a href="https://www.westernaustralia.com/au/hire/margaret-river-surf-school-hire/65f14f32147bb5a30b91a668">Margaret River Surf School</a></td><td>Mobile van and home base</td><td>Soft and hard boards, wetsuits for kids and adults; a discount for hire over 24 hours</td></tr>
-        </tbody>
-      </table>
-    </div>
-
     <div class="cards">
       <div class="card">
         <h3>Fun runs &mdash; two this time</h3>
@@ -1544,20 +1560,6 @@
         </tbody>
       </table>
     </div>
-    <div class="table-wrap" style="margin-bottom:1.2rem">
-      <table>
-        <caption>Rottnest day, Wed 24 Mar, four of you. Prices from 2025&ndash;26 listings in A$, converted at about 0.6, so indicative only and likely a little higher in 2027</caption>
-        <thead><tr><th>Way to do it</th><th>What's in it</th><th>About</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Do it yourself</strong></td><td>Ferry from Fremantle, bikes (about A$35 an adult, A$18 a child), your own masks and snorkels, the free trails at Little Salmon Bay and Parker Point</td><td class="num"><strong>&euro;205</strong></td></tr>
-          <tr><td>Do it yourself, snorkel sets hired</td><td>As above, plus 4 sets at about A$20 a day (<a href="https://www.rottnestfastferries.com.au/bike-snorkel-hire/">bike and snorkel hire</a>)</td><td class="num">&euro;255</td></tr>
-          <tr><td>Guided snorkel boat</td><td>Ferry, plus a 3-hour boat trip to sheltered spots with gear and wetsuits included, about A$117 an adult (child price not found; priced here as four adults)</td><td class="num">&euro;420</td></tr>
-          <tr><td>Capella catamaran</td><td>Ferry, plus 3 adults at A$185 and 1 child at A$145 (Alice, 12, is in the child age band; Elliot, 16, is not)</td><td class="num">&euro;560</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="linkbox-note">The ferry is the part you can't avoid: about A$220&ndash;240 for a same-day family return including the island admission fee, if Elliot counts as a child (<a href="https://rottnestexpress.com.au/ferry-bookings/fares/">Rottnest Express</a>, <a href="https://www.sealink.com.au/rottnest-island/ferry-information/ferry-fares/">SeaLink</a>), or about &euro;140. The Capella is a lovely day but it costs about &euro;355 more than doing it yourself, and the free snorkel trails are good reef. It is also only running from 7 Nov 2026 to April, and the departure times can change with weather and numbers.</p>
-
     <div class="table-wrap">
       <table>
         <caption>Known or likely costs, party of 4 unless noted (currency as shown)</caption>
@@ -1566,7 +1568,8 @@
           <tr><td>Singapore, 3 nights at PARKROYAL on Beach Road</td><td>Family</td><td class="num">~&euro;621 room only (&euro;207 a night, twin room for four); breakfast extra, not priced</td></tr>
           <tr><td>Wakeboard session, Singapore</td><td>Family</td><td class="num tbc">TBC &mdash; operator not chosen</td></tr>
           <tr><td>Caversham Wildlife Park entry</td><td>Family</td><td class="num tbc">TBC &mdash; shows and animal food are included</td></tr>
-          <tr><td>Rottnest day: ferry, bikes, and a snorkel tour or day sail</td><td>Family</td><td class="num">About &euro;205 do-it-yourself; &euro;420 with a guided snorkel boat; &euro;560 on the Capella (see the Rottnest table above)</td></tr>
+          <tr><td>Rottnest day: ferry, bikes, and a snorkel tour or day sail</td><td>Family</td><td class="num">About &euro;205 do-it-yourself; &euro;420 with a guided snorkel boat; &euro;560 on the Capella (see the Rottnest options under Leg 2)</td></tr>
+          <tr><td>FliteScooter (eFoil), East Fremantle, 1 hour &mdash; optional</td><td>Morgan and Elliot</td><td class="num">About &euro;200 (&euro;100 each, your figure; mornings only)</td></tr>
           <tr><td>Rental car, Perth Airport, Tue 23&ndash;Sun 28 (5 days)</td><td>Family</td><td class="num tbc">About &euro;200&ndash;250 at &euro;40&ndash;50 a day (your figure), plus fuel and parking at Fremantle. Thu&ndash;Sun only would be about &euro;120&ndash;150, but then you need a taxi from the airport. Not a quote</td></tr>
           <tr><td>Rental car, Melbourne Airport, Sun 28 Mar&ndash;Fri 2 Apr (5 days, mid-size SUV)</td><td>Family</td><td class="num tbc">About &euro;200&ndash;250 at &euro;40&ndash;50 a day (your figure; Easter and school holidays may push it higher). Not a quote &mdash; <a href="https://cheapflights.com.au/car-rentals/Melbourne-Tullamarine">compare here</a></td></tr>
           <tr><td>Run2Cure entry</td><td>Whoever's running</td><td class="num tbc">TBC</td></tr>
@@ -1708,7 +1711,7 @@
       <li><strong>Pre-flag the allergy on every flight booking</strong> &mdash; nut-free meal request, medical notes on the PNR, ask about buffer-zone seating and pre-boarding to wipe the area down.</li>
       <li><strong>Singapore is deliberate</strong> &mdash; high English fluency, clear packaged-food labelling, staff used to allergy questions.</li>
       <li>Self-catering via <strong>HomeExchange helps</strong> &mdash; own kitchen for most stays cuts the restaurant risk right down.</li>
-      <li><strong>Wineries and chocolate factories are a specific risk</strong> (Option B) &mdash; cellar-door platters and chocolate production lines are high cross-contamination territory. Call the Margaret River Chocolate Factory, and any cellar-door lunch you do book, ahead.</li>
+      <li><strong>Chocolate factories are a specific risk</strong> (Option B) &mdash; production lines are high cross-contamination territory. Call the Margaret River Chocolate Factory, and any cafe lunch you do book, ahead.</li>
       <li>Carry an <strong>allergy translation / chef card</strong>; know the local emergency number (Singapore 995, Australia 000).</li>
       <li><strong>Travel insurance</strong> confirmed to cover anaphylaxis and medical evacuation; carry a copy of the policy.</li>
     </ul>
@@ -1779,8 +1782,8 @@
         <p><a href="https://fliteschool.com/">Fliteschool Noosa</a> &middot; <a href="https://gorideawave.com.au/surf-lessons/noosa/">Go Ride A Wave</a> &middot; <a href="https://www.manlysurfschool.com/">Manly Surf School</a> &middot; <a href="https://www.gosurf.com.au/">Go Surf Perth</a> &middot; <a href="https://bayplay.com.au/">Bayplay (Mornington kayak)</a> &middot; <a href="https://www.rockinghamwildencounters.com.au/">Penguin Island kayak</a> &middot; <a href="https://www.highnwild.com.au/">High &amp; Wild (canyoning)</a></p>
       </div>
       <div class="card">
-        <h3>Wine &amp; food (optional)</h3>
-        <p><a href="https://www.vassefelix.com.au/">Vasse Felix</a> &middot; <a href="https://www.howardparkwines.com.au/">Howard Park</a> &middot; <a href="https://www.voyagerestate.com.au/">Voyager Estate</a> &middot; <a href="https://www.vassevirgin.com.au/">Vasse Virgin</a> &middot; <a href="https://www.portphillipestate.com.au/">Port Phillip Estate</a></p>
+        <h3>Sculpture garden (Mornington)</h3>
+        <p><a href="https://www.portphillipestate.com.au/">Port Phillip Estate</a></p>
       </div>
       <div class="card">
         <h3>Parks &amp; trails</h3>
